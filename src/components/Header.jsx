@@ -1,12 +1,15 @@
 import React from "react";
 
-export const SubHeader = () => {
+export const SubHeader = ({ setHeaderShow }) => {
 	return (
 		<div className="flex justify-between flex-nowrap items-center p-3">
 			<div id="name" className="text-2xl p-2">
 				Akash Deep
 			</div>
-			<div className="flex flex-col gap-3 m-3 p-2">
+			<div
+				onClick={() => setHeaderShow(true)}
+				className="flex flex-col gap-3 m-3 p-4 cursor-pointer"
+			>
 				<div className="bg-white h-0.5 w-8"></div>
 				<div className="bg-white h-0.5 w-8"></div>
 			</div>
@@ -14,7 +17,7 @@ export const SubHeader = () => {
 	);
 };
 
-const Header = () => {
+const Header = ({ setHeaderShow }) => {
 	return (
 		<>
 			<div className="lightest-green text-green-950  flex flex-col justify-end items-center h-[90vh] min-h-fit w-full absolute top-0 p-3">
@@ -26,12 +29,17 @@ const Header = () => {
 					rem aperiam suscipit?
 				</div>
 			</div>
-			<div className="lighter-green text-green-950 text-7xl flex justify-between items-center h-[80vh] min-h-fit w-full absolute top-0 p-5">
-				<div className="flex flex-col gap-3 m-3 p-2 absolute top-5 right-5">
-					<div className="bg-green-950 h-0.5 w-8 origin-left translate-y-1/2"></div>
-					<div className="bg-green-950 h-0.5 w-8 origin-left translate-y-1/2"></div>
+			<div className="lighter-green text-green-950 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[80vh] min-h-fit w-full absolute top-0 p-5">
+				<div
+					onClick={() => setHeaderShow(false)}
+					className="flex flex-col gap-3 m-3 p-2 absolute top-5 right-5 cursor-pointer"
+				>
+					<div className="bg-green-950 h-0.5 w-8 origin-left rotate-45"></div>
+					<div className="bg-green-950 h-0.5 w-8 origin-left -rotate-45"></div>
 				</div>
-				<p id="name-big">Akash deep</p>
+				<p id="name-big" className="sm:text-7xl md:text-8xl text-6xl">
+					Akash deep
+				</p>
 				<div className="flex flex-col items-start">
 					<p>Home</p>
 					<p>About</p>
