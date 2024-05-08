@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fonts */
+@font-face {
+    font-family: PP;
+    src: url(../public/NeueMachina-Light.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: PP;
+    src: url(../public/NeueMachina-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: PP;
+    src: url(../public/PPNeueMachina-PlainUltrabold.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: CR;
+    src: url(../public/Thrilling-Italic-BF663afe5ee0889.otf);
+    font-weight: 800;
+}
+
+/* Color */
+.dark-green {
+    background-color: #052210;
+    color: #fff;
+}
+
+.light-green {
+    background-color: #003A06;
+    color: #fff;
+}
+
+.lighter-green {
+    background-color: #43BF1C;
+}
+
+.lightest-green {
+    background-color: #A2E664;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Style */
+#root {
+    font-family: PP;
+    font-weight: 800;
+    background-color: #052210;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+#name-big {
+    font-family: CR;
+    /* text-transform: ; */
+
+    font-size: 5rem;
+}
