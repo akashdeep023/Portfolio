@@ -8,7 +8,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			</div>
 			<div
 				onClick={() => setHeaderShow(true)}
-				className="flex flex-col gap-3 m-3 p-4 cursor-pointer"
+				className="flex flex-col gap-3 m-8  cursor-pointer"
 			>
 				<div className="bg-white h-0.5 w-8"></div>
 				<div className="bg-white h-0.5 w-8"></div>
@@ -19,8 +19,8 @@ export const SubHeader = ({ setHeaderShow }) => {
 
 const Header = ({ setHeaderShow }) => {
 	return (
-		<>
-			<div className="lightest-green text-green-950  flex flex-col justify-end items-center h-[90vh] min-h-fit w-full absolute top-0 p-3">
+		<div id="header">
+			<div className="lightest-green text-green-950  flex flex-col justify-end items-center h-[90vh] min-h-fit w-full absolute top-0 p-3 z-50">
 				<div>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 					Veritatis, tempore quis praesentium sint iste non
@@ -29,7 +29,7 @@ const Header = ({ setHeaderShow }) => {
 					rem aperiam suscipit?
 				</div>
 			</div>
-			<div className="lighter-green text-green-950 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[80vh] min-h-fit w-full absolute top-0 p-5">
+			<div className="lighter-green text-green-950 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[80vh] min-h-fit w-full absolute top-0 p-5 z-50">
 				<div
 					onClick={() => setHeaderShow(false)}
 					className="flex flex-col gap-3 m-3 p-2 absolute top-5 right-5 cursor-pointer"
@@ -47,7 +47,7 @@ const Header = ({ setHeaderShow }) => {
 					<p>Contact</p>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
