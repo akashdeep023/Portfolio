@@ -4,14 +4,14 @@ import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
 	const [headerShow, setHeaderShow] = useState(false);
-	const scrollBox = useRef();
+	const scrollBox = useRef("");
 	// Use LOCOMotiveScroll
-	useEffect(() => {
-		const scroll = new LocomotiveScroll({
-			el: document.querySelector(".scroll"),
-			smooth: true,
-		});
-	}, [scrollBox.current, scroll]);
+	// useEffect(() => {
+	// 	const scroll = new LocomotiveScroll({
+	// 		el: document.querySelector(".scroll"),
+	// 		smooth: true,
+	// 	});
+	// }, [scrollBox.current, scroll]);
 	return (
 		<div className="scroll" ref={scrollBox}>
 			<SubHeader setHeaderShow={setHeaderShow} />

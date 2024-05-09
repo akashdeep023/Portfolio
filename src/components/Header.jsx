@@ -1,16 +1,45 @@
 import React from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 export const SubHeader = ({ setHeaderShow }) => {
+	useGSAP(() => {
+		gsap.from("#name span", {
+			duration: 0.3,
+			opacity: 0,
+			y: -50,
+			stagger: 0.05,
+			animation: "easeOutQuad",
+		});
+		gsap.from("#menu div", {
+			duration: 0.3,
+			opacity: 0,
+			x: 80,
+			stagger: 0.08,
+			animation: "easeOutQuad",
+		});
+	});
 	return (
 		<div className="flex justify-between flex-nowrap items-center p-3">
 			<div id="name" className="text-2xl p-2">
-				Akash Deep
+				<span>A</span>
+				<span>k</span>
+				<span>a</span>
+				<span>s</span>
+				<span>h</span>
+				<span>&nbsp;</span>
+				<span>d</span>
+				<span>e</span>
+				<span>e</span>
+				<span>p</span>
 			</div>
 			<div
+				id="menu"
 				onClick={() => setHeaderShow(true)}
-				className="flex flex-col gap-3 m-8  cursor-pointer"
+				className="flex flex-col gap-2 my-5 mx-2 sm:mx-5 items-end cursor-pointer"
 			>
-				<div className="bg-white h-0.5 w-8"></div>
+				<div className="bg-white h-0.5 w-10"></div>
+				<div className="bg-white h-0.5 w-4"></div>
 				<div className="bg-white h-0.5 w-8"></div>
 			</div>
 		</div>
@@ -18,29 +47,81 @@ export const SubHeader = ({ setHeaderShow }) => {
 };
 
 const Header = ({ setHeaderShow }) => {
+	let closeHeaderAnimation;
+	useGSAP(() => {
+		let tl = gsap.timeline();
+		tl.from("#header>div", {
+			duration: 0.3,
+			opacity: 0,
+			y: "-100%",
+			stagger: 0.3,
+			animation: "easeOutQuad",
+		});
+		tl.from("#name-big", {
+			duration: 0.2,
+			opacity: 0,
+			y: "50%",
+			animation: "easeOutQuad",
+		});
+		tl.from("#nav-link p", {
+			duration: 0.3,
+			opacity: 0,
+			x: "100%",
+			stagger: 0.15,
+			animation: "easeOutQuad",
+		});
+		closeHeaderAnimation = () => {
+			tl.to("#header>div", {
+				duration: 0.3,
+				opacity: 0,
+				y: "-100%",
+				stagger: 0.3,
+				reversed: true,
+				animation: "easeOutQuad",
+			});
+		};
+	});
+	const closeHeader = () => {
+		closeHeaderAnimation();
+		setTimeout(() => {
+			setHeaderShow(false);
+		}, 600);
+	};
 	return (
-		<div id="header">
-			<div className="lightest-green text-green-950  flex flex-col justify-end items-center h-[90vh] min-h-fit w-full absolute top-0 p-3 z-50">
-				<div>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-					Veritatis, tempore quis praesentium sint iste non
-					reprehenderit minima nesciunt sunt deleniti excepturi
-					exercitationem, ratione minus deserunt. Distinctio corporis
-					rem aperiam suscipit?
+		<div id="header" className="fixed w-full h-[90vh] top-0">
+			<div className="light-green text-green-950 text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full absolute top-0 p-3 z-50">
+				<div className="font-semibold text-sm sm:text-base">
+					Full Stack Developer | MERN Stack Specialist | Java | C++ |
+					DSA
+				</div>
+				<div className="hidden sm:block text-xs">
+					Experienced Full Stack Developer proficient in building
+					robust web applications using the MERN (MongoDB, Express.js,
+					React, Node.js) stack. Skilled in Java, C++, and
+					implementing efficient Data Structures & Algorithms for
+					optimized software solutions.
+				</div>
+				<div className="sm:hidden text-xs">
+					Experienced Full Stack Developer proficient in MERN stack
+					web development, Java, C++, and implementing efficient Data
+					Structures & Algorithms for optimized solutions.
 				</div>
 			</div>
-			<div className="lighter-green text-green-950 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[80vh] min-h-fit w-full absolute top-0 p-5 z-50">
+			<div className="lighter-green text-green-950 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
 				<div
-					onClick={() => setHeaderShow(false)}
-					className="flex flex-col gap-3 m-3 p-2 absolute top-5 right-5 cursor-pointer"
+					onClick={closeHeader}
+					className="flex flex-col gap-3 my-3 sm:m-3 p-2 absolute top-4 right-2 sm:right-1 cursor-pointer"
 				>
-					<div className="bg-green-950 h-0.5 w-8 origin-left rotate-45"></div>
+					<div className="bg-green-950 h-0.5 w-10 origin-left rotate-45"></div>
 					<div className="bg-green-950 h-0.5 w-8 origin-left -rotate-45"></div>
 				</div>
 				<p id="name-big" className="sm:text-7xl md:text-8xl text-6xl">
 					Akash deep
 				</p>
-				<div className="flex flex-col items-start">
+				<div
+					id="nav-link"
+					className="flex flex-col items-start font-bold"
+				>
 					<p>Home</p>
 					<p>About</p>
 					<p>Project</p>

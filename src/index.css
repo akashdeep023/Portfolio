@@ -53,16 +53,35 @@ body {
     height: 100%;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Style */
 #root {
     font-family: PP;
-    font-weight: 800;
-    background-color: #052210;
+    font-weight: 300;
     color: #fff;
+    background-color: #003A06;
     /* height: 100%;
     width: 100%; */
 }
 
+#name {
+    font-family: PP;
+    font-weight: 800;
+}
+
 #name-big {
     font-family: CR;
+}
+
+span {
+    display: inline-block;
+}
+
+#cursor {
+    display: none;
+    transition-duration: .1s;
+    /* transition-timing-function: ease-out; */
 }
