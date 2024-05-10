@@ -48,6 +48,8 @@ export const SubHeader = ({ setHeaderShow }) => {
 
 const Header = ({ setHeaderShow }) => {
 	let closeHeaderAnimation;
+	let hoverHeaderAnimation;
+	let hoverOutHeaderAnimation;
 	useGSAP(() => {
 		let tl = gsap.timeline();
 		tl.from("#header>div", {
@@ -80,12 +82,36 @@ const Header = ({ setHeaderShow }) => {
 				animation: "easeOutQuad",
 			});
 		};
+		hoverHeaderAnimation = (e) => {
+			gsap.to("." + e.className, {
+				duration: 0.2,
+				opacity: 1,
+				color: "#fff",
+				stagger: 0.05,
+				animation: "easeOutQuad",
+			});
+		};
+		hoverOutHeaderAnimation = (e) => {
+			gsap.to("." + e.className, {
+				duration: 0.2,
+				opacity: 1,
+				color: "#052210",
+				stagger: 0.05,
+				animation: "easeOutQuad",
+			});
+		};
 	});
 	const closeHeader = () => {
 		closeHeaderAnimation();
 		setTimeout(() => {
 			setHeaderShow(false);
-		}, 600);
+		}, 1000);
+	};
+	const hoverHeader = (e) => {
+		hoverHeaderAnimation(e);
+	};
+	const hoverOutHeader = (e) => {
+		hoverOutHeaderAnimation(e);
 	};
 	return (
 		<div id="header" className="fixed w-full h-[90vh] top-0">
@@ -120,12 +146,55 @@ const Header = ({ setHeaderShow }) => {
 				</p>
 				<div
 					id="nav-link"
-					className="flex flex-col items-start font-bold"
+					className="flex flex-col gap-4 items-start font-bold"
 				>
-					<p>Home</p>
-					<p>About</p>
-					<p>Project</p>
-					<p>Contact</p>
+					<p
+						className="cursor-pointer"
+						onMouseLeave={(e) => hoverOutHeader(e.target)}
+						onMouseEnter={(e) => hoverHeader(e.target)}
+					>
+						<span className="home-text">H</span>
+						<span className="home-text">o</span>
+						<span className="home-text">m</span>
+						<span className="home-text">e</span>
+					</p>
+					<p
+						className="cursor-pointer"
+						onMouseLeave={(e) => hoverOutHeader(e.target)}
+						onMouseEnter={(e) => hoverHeader(e.target)}
+					>
+						<span className="about-text">A</span>
+						<span className="about-text">b</span>
+						<span className="about-text">o</span>
+						<span className="about-text">u</span>
+						<span className="about-text">t</span>
+					</p>
+					<p
+						className="cursor-pointer"
+						onMouseLeave={(e) => hoverOutHeader(e.target)}
+						onMouseEnter={(e) => hoverHeader(e.target)}
+					>
+						<span className="project-text">P</span>
+						<span className="project-text">r</span>
+						<span className="project-text">o</span>
+						<span className="project-text">j</span>
+						<span className="project-text">e</span>
+						<span className="project-text">c</span>
+						<span className="project-text">t</span>
+					</p>
+					<p
+						className="cursor-pointer"
+						onMouseLeave={(e) => hoverOutHeader(e.target)}
+						onMouseEnter={(e) => hoverHeader(e.target)}
+					>
+						<span className="contact-text">C</span>
+						<span className="contact-text">o</span>
+						<span className="contact-text">n</span>
+						<span className="contact-text">t</span>
+						<span className="contact-text">a</span>
+						<span className="contact-text">c</span>
+						<span className="contact-text">t</span>
+					</p>
 				</div>
 			</div>
 		</div>
