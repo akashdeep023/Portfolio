@@ -42,7 +42,7 @@ const AppLayout = () => {
 				<SubHeader setHeaderShow={setHeaderShow} />
 				{headerShow && <Header setHeaderShow={setHeaderShow} />}
 			</div>
-			<div className="app-layout-content mt-14 sm:mt-16 md:mt-20 p-2 sm:p-4 w-full min-h-[60vh] lightest-green overflow-hidden">
+			<div className="app-layout-content mt-14 sm:mt-16 md:mt-20 w-full min-h-[60vh] lightest-green overflow-hidden">
 				<Outlet />
 			</div>
 			<div className="fixed bottom-0 z-30 w-full">{/* <Links /> */}</div>
