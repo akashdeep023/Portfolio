@@ -1,52 +1,78 @@
 import { useEffect, useRef, useState } from "react";
 import Header, { SubHeader } from "./components/Header";
 import LocomotiveScroll from "locomotive-scroll";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Project from "./components/Project";
+gsap.registerPlugin(ScrollTrigger);
 
-function App() {
+const AppLayout = () => {
 	const [headerShow, setHeaderShow] = useState(false);
 	const scrollBox = useRef("");
-	// const cursor = useRef();
 	// Use LOCOMotiveScroll -----------------------------
-	useEffect(() => {
-		const scroll = new LocomotiveScroll({
-			el: document.querySelector(".scroll"),
-			smooth: true,
-		});
-	}, [scrollBox.current, scroll]);
-
-	// let cursor = document.querySelector("#curson");
 	// useEffect(() => {
-	// 	let mousemovefn = () => {
-	// 		document.addEventListener("mousemove", (event) => {
-	// 			cursor.current.style.left = event.clientX + "px";
-	// 			cursor.current.style.top = event.clientY + "px";
-	// 			cursor.current.style.display = "block";
-	// 			console.log(cursor.current);
-	// 		});
-	// 	};
-	// 	mousemovefn();
-	// 	return () => mousemovefn;
-	// });
+	// 	const scroll = new LocomotiveScroll({
+	// 		el: document.querySelector("#scroll"),
+	// 		smooth: true,
+	// 	});
+	// }, [scrollBox.current, scroll]);
 
+	window.addEventListener("onload", () => {
+		console.log("onload");
+	});
 	return (
-		<div className="scroll" ref={scrollBox}>
-			<SubHeader setHeaderShow={setHeaderShow} />
-			{headerShow && <Header setHeaderShow={setHeaderShow} />}
-			<div
-				data-scroll
-				// data-scroll-speed="2"
-				className="bg-green-900 h-screen w-full flex items-center justify-center"
-			>
-				Hello Jack
+		<div
+			data-scroll-container
+			id="scroll"
+			className="sticky"
+			ref={scrollBox}
+		>
+			<div data-scroll data-scroll-sticky data-scroll-target="#scroll">
+				<SubHeader setHeaderShow={setHeaderShow} />
+				{headerShow && <Header setHeaderShow={setHeaderShow} />}
 			</div>
-			<div className="bg-green-950 h-screen w-full"></div>
-			{/* <div
-				id="cursor"
-				ref={cursor}
-				className="h-5 w-5 border rounded-full fixed z-50 bg-black"
-			></div> */}
+			<div className="app-layout-content">
+				<Outlet />
+			</div>
 		</div>
 	);
+};
+
+const appRouter = createBrowserRouter([
+	{
+		path: "/",
+		element: <AppLayout />,
+		children: [
+			{
+				path: "/",
+				element: <Home />,
+			},
+			{
+				path: "/about",
+				element: <About />,
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
+			},
+			{
+				path: "/Project",
+				element: <Project />,
+			},
+			{
+				path: "*",
+				element: <Home />,
+			},
+		],
+	},
+]);
+function App() {
+	return <RouterProvider router={appRouter}></RouterProvider>;
 }
 
 export default App;

@@ -33,9 +33,12 @@
     color: #fff;
 }
 
+.dark-green-text {
+    color: #052210;
+}
+
 .light-green {
     background-color: #003A06;
-    color: #fff;
 }
 
 .lighter-green {
@@ -44,6 +47,7 @@
 
 .lightest-green {
     background-color: #A2E664;
+    color: #000;
 }
 
 
@@ -81,16 +85,30 @@ span {
     display: inline-block;
 }
 
-/* #cursor {
+#cursor {
     display: none;
     transform: translate(-50%, -50%);
-    transition-duration: .8s;
-    transition-timing-function: ease-in;
-    background-color: #000;
-    height: 20px;
-    width: 20px;
+    transition-timing-function: ease;
+    background-color: #fff;
+    height: 5vw;
+    width: 5vw;
     border: 1px solid #fff;
     border-radius: 50%;
     position: fixed;
     z-index: 1000;
-} */
+    /* pointer-events: none; */
+    /* transform: rotate(360deg); */
+
+}
+
+#cursor div {
+    /* transform: rotate(360deg); */
+    background: radial-gradient(#43BF1C, #0b1600);
+    font-size: 1vw;
+    font-weight: 800;
+}
+
+#com-img {
+    background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+}

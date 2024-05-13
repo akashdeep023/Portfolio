@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 export const SubHeader = ({ setHeaderShow }) => {
 	useGSAP(() => {
@@ -19,8 +20,15 @@ export const SubHeader = ({ setHeaderShow }) => {
 			animation: "easeOutQuad",
 		});
 	});
+
+	useEffect(() => {
+		document.querySelector("#scroll", () => {
+			console.log("scroll");
+		});
+	}, []);
+
 	return (
-		<div className="flex justify-between flex-nowrap items-center p-3">
+		<div className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 fixed w-full top-0 dark-green transition-all">
 			<div id="name" className="text-2xl p-2">
 				<span>A</span>
 				<span>k</span>
@@ -36,7 +44,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			<div
 				id="menu"
 				onClick={() => setHeaderShow(true)}
-				className="flex flex-col gap-2 my-5 mx-2 sm:mx-5 items-end cursor-pointer"
+				className="flex flex-col gap-2 my-5 sm:my-6 md:my-7 items-end cursor-pointer transition-all"
 			>
 				<div className="bg-white h-0.5 w-10"></div>
 				<div className="bg-white h-0.5 w-4"></div>
@@ -115,7 +123,7 @@ const Header = ({ setHeaderShow }) => {
 	};
 	return (
 		<div id="header" className="fixed w-full h-[90vh] top-0">
-			<div className="light-green text-green-950 text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full absolute top-0 p-3 z-50">
+			<div className="dark-green text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
 				<div className="font-semibold text-sm sm:text-base">
 					Full Stack Developer | MERN Stack Specialist | Java | C++ |
 					DSA
@@ -133,10 +141,10 @@ const Header = ({ setHeaderShow }) => {
 					Structures & Algorithms for optimized solutions.
 				</div>
 			</div>
-			<div className="lighter-green text-green-950 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
+			<div className="lighter-green dark-green-text text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
 				<div
 					onClick={closeHeader}
-					className="flex flex-col gap-3 my-3 sm:m-3 p-2 absolute top-4 right-2 sm:right-1 cursor-pointer"
+					className="flex flex-col gap-3 mx-2 sm:mx-4 md:mx-6 my-6 sm:my-7 md:my-8 absolute top-0 right-0  cursor-pointer"
 				>
 					<div className="bg-green-950 h-0.5 w-10 origin-left rotate-45"></div>
 					<div className="bg-green-950 h-0.5 w-8 origin-left -rotate-45"></div>
@@ -148,53 +156,65 @@ const Header = ({ setHeaderShow }) => {
 					id="nav-link"
 					className="flex flex-col gap-4 items-start font-bold"
 				>
-					<p
-						className="cursor-pointer"
-						onMouseLeave={(e) => hoverOutHeader(e.target)}
-						onMouseEnter={(e) => hoverHeader(e.target)}
-					>
-						<span className="home-text">H</span>
-						<span className="home-text">o</span>
-						<span className="home-text">m</span>
-						<span className="home-text">e</span>
-					</p>
-					<p
-						className="cursor-pointer"
-						onMouseLeave={(e) => hoverOutHeader(e.target)}
-						onMouseEnter={(e) => hoverHeader(e.target)}
-					>
-						<span className="about-text">A</span>
-						<span className="about-text">b</span>
-						<span className="about-text">o</span>
-						<span className="about-text">u</span>
-						<span className="about-text">t</span>
-					</p>
-					<p
-						className="cursor-pointer"
-						onMouseLeave={(e) => hoverOutHeader(e.target)}
-						onMouseEnter={(e) => hoverHeader(e.target)}
-					>
-						<span className="project-text">P</span>
-						<span className="project-text">r</span>
-						<span className="project-text">o</span>
-						<span className="project-text">j</span>
-						<span className="project-text">e</span>
-						<span className="project-text">c</span>
-						<span className="project-text">t</span>
-					</p>
-					<p
-						className="cursor-pointer"
-						onMouseLeave={(e) => hoverOutHeader(e.target)}
-						onMouseEnter={(e) => hoverHeader(e.target)}
-					>
-						<span className="contact-text">C</span>
-						<span className="contact-text">o</span>
-						<span className="contact-text">n</span>
-						<span className="contact-text">t</span>
-						<span className="contact-text">a</span>
-						<span className="contact-text">c</span>
-						<span className="contact-text">t</span>
-					</p>
+					<Link to={"/"}>
+						<p
+							className="cursor-pointer"
+							onMouseLeave={(e) => hoverOutHeader(e.target)}
+							onMouseEnter={(e) => hoverHeader(e.target)}
+							onClick={closeHeader}
+						>
+							<span className="home-text">H</span>
+							<span className="home-text">o</span>
+							<span className="home-text">m</span>
+							<span className="home-text">e</span>
+						</p>
+					</Link>
+					<Link to={"/about"}>
+						<p
+							className="cursor-pointer"
+							onMouseLeave={(e) => hoverOutHeader(e.target)}
+							onMouseEnter={(e) => hoverHeader(e.target)}
+							onClick={closeHeader}
+						>
+							<span className="about-text">A</span>
+							<span className="about-text">b</span>
+							<span className="about-text">o</span>
+							<span className="about-text">u</span>
+							<span className="about-text">t</span>
+						</p>
+					</Link>
+					<Link to={"/project"}>
+						<p
+							className="cursor-pointer"
+							onMouseLeave={(e) => hoverOutHeader(e.target)}
+							onMouseEnter={(e) => hoverHeader(e.target)}
+							onClick={closeHeader}
+						>
+							<span className="project-text">P</span>
+							<span className="project-text">r</span>
+							<span className="project-text">o</span>
+							<span className="project-text">j</span>
+							<span className="project-text">e</span>
+							<span className="project-text">c</span>
+							<span className="project-text">t</span>
+						</p>
+					</Link>
+					<Link to={"/contact"}>
+						<p
+							className="cursor-pointer"
+							onMouseLeave={(e) => hoverOutHeader(e.target)}
+							onMouseEnter={(e) => hoverHeader(e.target)}
+							onClick={closeHeader}
+						>
+							<span className="contact-text">C</span>
+							<span className="contact-text">o</span>
+							<span className="contact-text">n</span>
+							<span className="contact-text">t</span>
+							<span className="contact-text">a</span>
+							<span className="contact-text">c</span>
+							<span className="contact-text">t</span>
+						</p>
+					</Link>
 				</div>
 			</div>
 		</div>
