@@ -2,12 +2,11 @@ import React from "react";
 
 const Home = () => {
 	return (
-		<div
-			id="home"
-			className="lightest-green h-screen w-full flex items-center justify-center font-bold text-2xl"
-		>
-			Hello I'm Akash Deep &nbsp;
-			<span id="wordchange">Web developer</span>
+		<div id="home" className="h-full w-full">
+			<div className="h-screen w-full flex py-20 px-2 items-end text-[9vw] font-bold whitespace-nowrap">
+				Hello I'm Akash Deep &nbsp;
+				<span id="wordchange">Web developer</span>
+			</div>
 		</div>
 	);
 };

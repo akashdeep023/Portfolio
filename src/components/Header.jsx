@@ -28,19 +28,21 @@ export const SubHeader = ({ setHeaderShow }) => {
 	}, []);
 
 	return (
-		<div className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 fixed w-full top-0 dark-green transition-all">
-			<div id="name" className="text-2xl p-2">
-				<span>A</span>
-				<span>k</span>
-				<span>a</span>
-				<span>s</span>
-				<span>h</span>
-				<span>&nbsp;</span>
-				<span>d</span>
-				<span>e</span>
-				<span>e</span>
-				<span>p</span>
-			</div>
+		<div className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green transition-all">
+			<Link to={"/"}>
+				<div id="name" className="text-2xl p-2">
+					<span>A</span>
+					<span>k</span>
+					<span>a</span>
+					<span>s</span>
+					<span>h</span>
+					<span>&nbsp;</span>
+					<span>d</span>
+					<span>e</span>
+					<span>e</span>
+					<span>p</span>
+				</div>
+			</Link>
 			<div
 				id="menu"
 				onClick={() => setHeaderShow(true)}
@@ -73,6 +75,7 @@ const Header = ({ setHeaderShow }) => {
 			y: "50%",
 			animation: "easeOutQuad",
 		});
+
 		tl.from("#nav-link p", {
 			duration: 0.3,
 			opacity: 0,
@@ -108,6 +111,21 @@ const Header = ({ setHeaderShow }) => {
 				animation: "easeOutQuad",
 			});
 		};
+	});
+	useGSAP(() => {
+		const tt = gsap.timeline({ repeat: -1 });
+		tt.to("#name-big span", {
+			duration: 0.7,
+			stagger: 0.1,
+			color: "white",
+			animation: "easeOutQuad",
+		});
+		tt.to("#name-big span", {
+			duration: 0.7,
+			stagger: 0.1,
+			color: "#052210",
+			animation: "easeOutQuad",
+		});
 	});
 	const closeHeader = () => {
 		closeHeaderAnimation();
@@ -150,7 +168,16 @@ const Header = ({ setHeaderShow }) => {
 					<div className="bg-green-950 h-0.5 w-8 origin-left -rotate-45"></div>
 				</div>
 				<p id="name-big" className="sm:text-7xl md:text-8xl text-6xl">
-					Akash deep
+					<span>A</span>
+					<span>k</span>
+					<span>a</span>
+					<span>s</span>
+					<span>h</span>
+					<span>&nbsp;</span>
+					<span>d</span>
+					<span>e</span>
+					<span>e</span>
+					<span>p</span>
 				</p>
 				<div
 					id="nav-link"
