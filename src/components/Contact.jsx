@@ -7,7 +7,9 @@ const Contact = () => {
 	return (
 		<div className="w-full min-full">
 			<div>
-				<h1 className="text-4xl my-10">Get In Contact</h1>
+				<h1 className="text-2xl sm:text-4xl my-4">
+					Reach out to us for your queries.
+				</h1>
 			</div>
 			<div className="flex items-center justify-center w-full h-full">
 				<form
