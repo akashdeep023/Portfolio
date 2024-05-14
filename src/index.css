@@ -38,7 +38,7 @@
 }
 
 .light-green {
-    background-color: #003A06;
+    background-color: #012806;
     color: #fff;
 }
 
@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
     font-family: PP;
     font-weight: 300;
     color: #fff;
-    background-color: #003A06;
+    background-color: #012806;
 }
 
 #name {
@@ -93,6 +93,22 @@ body::-webkit-scrollbar {
 
 span {
     display: inline-block;
+}
+
+.btn-style {
+    background-color: #43BF1C;
+    color: #000;
+}
+
+.btn-style:hover {
+    background-color: #052210;
+    color: #fff;
+}
+
+.bg-green-gradient {
+    background: radial-gradient(circle at top center, #4ccf24 0%, #43BF1C 10%, #024e09 50%, #003A06 70%, #012806 100%);
+    /* background: radial-gradient(ellipse at top center, #4ccf24 0%, #43BF1C 10%, #024e09 35%, #003A06 40%, #012806 60%); */
+    /* background-size: 100% 50%; */
 }
 
 /* #cursor {

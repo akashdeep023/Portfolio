@@ -8,11 +8,11 @@ const LoaderName = () => {
 		tl.to("#load-name-big span", {
 			duration: 0.5,
 			stagger: 0.06,
-			color: "#003A06",
+			color: "#052210",
 			animation: "easeOutQuad",
 		});
 		tl.to("#load-name-big span", {
-			duration: 0.5,
+			duration: 1,
 			stagger: 0.06,
 			color: "white",
 			animation: "easeOutQuad",

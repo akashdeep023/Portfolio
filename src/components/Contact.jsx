@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Contact = () => {
+	const name = useRef("");
+	const email = useRef("");
+	const message = useRef("");
 	const handleContact = (e) => {
 		e.preventDefault();
+		console.log(
+			name.current.value,
+			email.current.value,
+			message.current.value
+		);
 	};
 	return (
-		<div className="w-full min-full">
-			<div>
-				<h1 className="text-2xl sm:text-4xl my-4">
+		<div className="w-full min-full mb-4 sm:mb-8">
+			<div className="w-full text-center">
+				<h1 className="text-2xl sm:text-4xl my-4 font-bold">
 					Reach out to us for your queries.
 				</h1>
 			</div>
@@ -22,9 +30,9 @@ const Contact = () => {
 						<b>Enter Full Name</b>
 					</label>
 					<input
-						className="p-2 sm:p-3 rounded-sm border-none outline-1 outline-green-800"
+						className="p-2 sm:p-3 rounded-sm border-none outline-1 outline-green-800 text-black/80"
 						type="text"
-						name="name"
+						ref={name}
 						placeholder="Enter Full Name"
 						required
 						id="fullname"
@@ -33,9 +41,9 @@ const Contact = () => {
 						<b>Enter Email Address</b>
 					</label>
 					<input
-						className="p-2 sm:p-3 rounded-sm border-none outline-1 outline-green-800"
+						className="p-2 sm:p-3 rounded-sm border-none outline-1 outline-green-800 text-black/80"
 						type="email"
-						name="email"
+						ref={email}
 						placeholder="Enter Email"
 						required
 						id="email"
@@ -44,15 +52,15 @@ const Contact = () => {
 						<b>Enter Message</b>
 					</label>
 					<textarea
-						className="p-2 sm:p-3 rounded-sm border-none outline-1 outline-green-800"
-						name="message"
+						className="p-2 sm:p-3 rounded-sm border-none outline-1 outline-green-800 text-black/80"
+						ref={message}
 						required
 						placeholder="Enter Message"
 						rows="5"
 						id="message"
 					></textarea>
 					<button
-						className="p-2 sm:p-3 rounded-sm border-none outline-1 bg-green-600  outline-green-800"
+						className="mt-2 p-2 sm:p-3 rounded-sm border-none outline-1 btn-style  outline-green-800 text-black/80"
 						type="submit"
 					>
 						<b>Submit</b>

@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
-		<div className="w-full min-h-80 h-[65vh] px-3 sm:px-5 py-8 flex flex-col gap-3 justify-evenly relative">
+		<div className="w-full min-h-fit h-1/2 px-3 sm:px-5 py-8 flex flex-col gap-3 justify-evenly relative z-40 dark-green">
 			<div className="absolute top-0 right-0 hidden sm:flex size-32 m-3 justify-center items-center overflow-hidden">
 				<LoaderName />
 			</div>
-			<h1 className="font-bold text-2xl whitespace-nowrap mr-3">
+			<h1 className="font-bold text-2xl whitespace-nowrap mr-3 border-b pb-4 sm:pb-7 mb-4 sm:mb-6 border-white/15">
 				Akash deep | Portfolio
 			</h1>
 			<div className="flex w-full justify-start md:justify-evenly text-xs md:text-sm gap-5 sm:gap-10">
@@ -24,7 +24,7 @@ const Footer = () => {
 
 							<li>
 								<a
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									href="mailto:contact.akashdeep023@gmail.com"
 									target="_blank"
 									rel="noreferrer"
@@ -55,13 +55,16 @@ const Footer = () => {
 								Pages
 							</li>
 							<li>
-								<Link className="hover:text-green-500" to={"/"}>
+								<Link
+									className="hover:text-green-700 hover:underline"
+									to={"/"}
+								>
 									Home
 								</Link>
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									to={"/about"}
 								>
 									About
@@ -69,7 +72,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									to={"/project"}
 								>
 									Project
@@ -77,7 +80,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									to={"/contact"}
 								>
 									Contact
@@ -92,7 +95,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									href="https://www.linkedin.com/in/akashdeep023/"
 									target="_blank"
 									rel="noreferrer"
@@ -102,7 +105,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									href="https://github.com/akashdeep023/"
 									target="_blank"
 									rel="noreferrer"
@@ -112,7 +115,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									href="https://instagram.com/akashdeep023_/"
 									target="_blank"
 									rel="noreferrer"
@@ -122,7 +125,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-500"
+									className="hover:text-green-700 hover:underline"
 									href="mailto:contact.akashdeep023@gmail.com"
 									target="_blank"
 									rel="noreferrer"
@@ -136,7 +139,7 @@ const Footer = () => {
 			</div>
 
 			<div>
-				<p className="text-sm sm:text-base">
+				<p className="text-sm sm:text-base border-t pt-4 sm:pt-7 mt-4 sm:mt-6 border-white/15">
 					All rights reserved 2024 © Akash deep | Portfolio.
 				</p>
 			</div>

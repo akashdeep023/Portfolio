@@ -3,7 +3,6 @@ import Header, { SubHeader } from "./components/Header";
 import LocomotiveScroll from "locomotive-scroll";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 const Home = React.lazy(() => import("./components/Home"));
 const About = React.lazy(() => import("./components/About"));
@@ -12,11 +11,11 @@ const Project = React.lazy(() => import("./components/Project"));
 import FrontPage from "./components/FrontPage";
 import Links from "./components/Links";
 import Footer from "./components/Footer";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const AppLayout = () => {
 	const [headerShow, setHeaderShow] = useState(false);
-	// const [frontPage, setfrontPage] = useState(true);
 	const scrollBox = useRef("");
 	// Use LOCOMotiveScroll -----------------------------
 	// useEffect(() => {
@@ -42,7 +41,7 @@ const AppLayout = () => {
 				<SubHeader setHeaderShow={setHeaderShow} />
 				{headerShow && <Header setHeaderShow={setHeaderShow} />}
 			</div>
-			<div className="app-layout-content mt-14 sm:mt-16 md:mt-20 w-full min-h-[60vh] lightest-green overflow-hidden">
+			<div className="app-layout-content mt-14 sm:mt-16 md:mt-20 w-full min-h-[60vh] light-green overflow-hidden">
 				<Outlet />
 			</div>
 			<div className="fixed bottom-0 z-30 w-full">{/* <Links /> */}</div>
@@ -98,6 +97,11 @@ const appRouter = createBrowserRouter([
 				),
 			},
 		],
+		// errorElement: (
+		// 	<Suspense fallback={<FrontPage />}>
+		// 		<div>Something went wrong</div>
+		// 	</Suspense>
+		// ),
 	},
 ]);
 function App() {
