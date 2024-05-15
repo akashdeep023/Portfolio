@@ -16,7 +16,7 @@ const Home = () => {
 			animation: "easeOutQuad",
 		});
 		gsap.from("#logo-box", {
-			duration: 1,
+			duration: 2,
 			opacity: 0,
 			// rotate: 90,
 			// y: "-100%",
