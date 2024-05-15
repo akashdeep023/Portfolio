@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 
-const Links = () => {
+const Links = ({ theme, handleTheme }) => {
 	return (
 		<div className="flex items-center justify-center w-full ">
 			<div className="flex items-center justify-center gap-6 sm:gap-10 backdrop-blur-md px-6 sm:px-10 py-3 sm:py-4 rounded-t-3xl border-t-2">
@@ -44,8 +44,11 @@ const Links = () => {
 				>
 					<GoMail fontSize={"25px"} />
 				</a>
-				<div className="cursor-pointer border-b-2 border-white/50 pt-2 pb-1 px-1 border-spacing-y-2">
-					{true ? (
+				<div
+					className="cursor-pointer border-b-2 border-white/50 pt-2 pb-1 px-1 border-spacing-y-2"
+					onClick={handleTheme}
+				>
+					{theme === "dark" ? (
 						<FaSun fontSize={"24px"} />
 					) : (
 						<FaMoon fontSize={"24px"} />

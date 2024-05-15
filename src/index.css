@@ -28,26 +28,50 @@
 }
 
 /* Color */
-.dark-green {
+#dark .dark-green {
     background-color: #052210;
     color: #fff;
 }
 
-.dark-green-text {
+#light .dark-green {
+    background-color: #303030;
+    color: #bdbdbd;
+}
+
+#dark .dark-green-text {
     color: #052210;
 }
 
-.light-green {
+#light .dark-green-text {
+    color: #052210;
+    /* color: #6a6a6a; */
+}
+
+#dark .light-green {
     background-color: #012806;
     color: #fff;
 }
 
-.lighter-green {
+#light .light-green {
+    background-color: #4c504c;
+    color: #fff;
+}
+
+#dark .lighter-green {
     background-color: #43BF1C;
 }
 
-.lightest-green {
+#light .lighter-green {
+    background-color: #d0d0d0;
+}
+
+#dark .lightest-green {
     background-color: #deffbe;
+    color: #052210;
+}
+
+#light .lightest-green {
+    background-color: #ffffff;
     color: #052210;
 }
 
@@ -94,18 +118,32 @@ span {
     display: inline-block;
 }
 
-.btn-style {
+#dark .btn-style {
     background-color: #43BF1C;
     color: #000;
 }
 
-.btn-style:hover {
+#light .btn-style {
+    background-color: #656a64;
+    color: #000;
+}
+
+#dark .btn-style:hover {
     background-color: #052210;
     color: #fff;
 }
 
-.bg-green-gradient {
+#light .btn-style:hover {
+    background-color: #1c1f1d;
+    color: #fff;
+}
+
+#dark .bg-green-gradient {
     background: radial-gradient(circle at top center, #4ccf24 0%, #43BF1C 10%, #024e09 50%, #003A06 70%, #012806 100%);
+}
+
+#light .bg-green-gradient {
+    background: radial-gradient(circle at top center, #e7ede6 0%, #b0b9ae 10%, #4c504c 50%, #303430 70%, #222523 100%);
 }
 
 #subHeader {

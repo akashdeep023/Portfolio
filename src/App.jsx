@@ -68,15 +68,20 @@ const AppLayout = () => {
 				<SubHeader setHeaderShow={setHeaderShow} />
 				{headerShow && <Header setHeaderShow={setHeaderShow} />}
 			</div>
-			<div className="app-layout-content mt-14 sm:mt-16 md:mt-20 w-full min-h-[60vh] light-green overflow-hidden">
+			<div className="h-14 sm:h-16 md:h-20 dark-green w-full"></div>
+			<div className="app-layout-content w-full min-h-[90vh] light-green overflow-hidden">
 				<Outlet />
 			</div>
-			<div className="fixed bottom-0 z-30 w-full">
-				<Links />
+			<div className={headerShow ? "hidden" : "block"}>
+				<div className="fixed bottom-0 z-30 w-full">
+					<Links theme={theme} handleTheme={handleTheme} />
+				</div>
 			</div>
 			<Footer />
-			<div className="fixed bottom-0 z-40 w-full">
-				<ScrollTop />
+			<div className={headerShow ? "hidden" : "block"}>
+				<div className="fixed bottom-0 z-40 w-full">
+					<ScrollTop />
+				</div>
 			</div>
 		</div>
 	);
