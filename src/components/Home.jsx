@@ -12,7 +12,7 @@ const Home = () => {
 			duration: 1,
 			opacity: 0,
 			y: 100,
-			stagger: 0.08,
+			stagger: 0.1,
 			animation: "easeOutQuad",
 		});
 		gsap.from("#logo-box", {
