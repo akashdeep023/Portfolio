@@ -3,13 +3,18 @@ import Header, { SubHeader } from "./components/Header";
 import LocomotiveScroll from "locomotive-scroll";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Outlet,
+	RouterProvider,
+	useLocation,
+} from "react-router-dom";
 // const Home = React.lazy(() => import("./components/Home"));
 const Home = React.lazy(() => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(import("./components/Home"));
-		}, 1000); // Delay of 1 second (1000 milliseconds)
+		}, 2500); // Delay of 1 second (1000 milliseconds)
 	});
 });
 const About = React.lazy(() => import("./components/About"));
@@ -19,10 +24,13 @@ import FrontPage from "./components/FrontPage";
 import Links from "./components/Links";
 import Footer from "./components/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTop from "./components/ScrollTop";
+import { handleScrollTop } from "./utils";
 gsap.registerPlugin(ScrollTrigger);
 
 const AppLayout = () => {
 	const [headerShow, setHeaderShow] = useState(false);
+	const { pathname } = useLocation();
 	const scrollBox = useRef("");
 	// Use LOCOMotiveScroll -----------------------------
 	// useEffect(() => {
@@ -31,6 +39,10 @@ const AppLayout = () => {
 	// 		smooth: true,
 	// 	});
 	// }, [scrollBox.current, scroll]);
+
+	useEffect(() => {
+		handleScrollTop();
+	}, [pathname]);
 
 	return (
 		<div
@@ -51,7 +63,12 @@ const AppLayout = () => {
 			<div className="app-layout-content mt-14 sm:mt-16 md:mt-20 w-full min-h-[60vh] light-green overflow-hidden">
 				<Outlet />
 			</div>
-			<div className="fixed bottom-0 z-30 w-full">{/* <Links /> */}</div>
+			<div className="fixed bottom-0 z-30 w-full">
+				<Links />
+			</div>
+			<div className="fixed bottom-0 z-50 w-full">
+				<ScrollTop />
+			</div>
 			<Footer />
 		</div>
 	);
@@ -105,7 +122,10 @@ const appRouter = createBrowserRouter([
 		],
 		errorElement: (
 			<Suspense fallback={<FrontPage />}>
-				<div>Something went wrong</div>
+				<div>
+					<h1>Something went wrong</h1>
+					<h1>404 | Bad request</h1>
+				</div>
 			</Suspense>
 		),
 	},
