@@ -57,6 +57,8 @@ body {
     width: 100%;
     height: 100%;
     user-select: none !important;
+    background-color: #012806;
+    color: #fff;
 }
 
 body::-webkit-scrollbar {
@@ -67,8 +69,6 @@ body::-webkit-scrollbar {
 #root {
     font-family: PP;
     font-weight: 300;
-    background-color: #012806;
-    color: #fff;
 }
 
 #name {
@@ -106,6 +106,14 @@ span {
 
 .bg-green-gradient {
     background: radial-gradient(circle at top center, #4ccf24 0%, #43BF1C 10%, #024e09 50%, #003A06 70%, #012806 100%);
+}
+
+#subHeader {
+    transition: top .35s ease-in;
+}
+
+#subHeader.hiddenbox {
+    top: -80px;
 }
 
 

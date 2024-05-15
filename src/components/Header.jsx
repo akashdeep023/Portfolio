@@ -22,13 +22,25 @@ export const SubHeader = ({ setHeaderShow }) => {
 	});
 
 	useEffect(() => {
-		document.querySelector("#scroll", () => {
-			console.log("scroll");
+		var prevScrollPos = window.pageYOffset;
+		window.addEventListener("scroll", () => {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollPos < currentScrollPos && currentScrollPos > 80) {
+				document.getElementById("subHeader").classList.add("hiddenbox");
+			} else {
+				document
+					.getElementById("subHeader")
+					.classList.remove("hiddenbox");
+			}
+			prevScrollPos = currentScrollPos;
 		});
 	}, []);
 
 	return (
-		<div className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green transition-all">
+		<div
+			id="subHeader"
+			className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green"
+		>
 			<Link to={"/"}>
 				<div id="name" className="text-2xl p-2">
 					<span>A</span>
@@ -46,7 +58,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			<div
 				id="menu"
 				onClick={() => setHeaderShow(true)}
-				className="flex flex-col gap-2 my-5 sm:my-6 md:my-7 items-end cursor-pointer transition-all"
+				className="flex flex-col gap-2 my-5 sm:my-6 md:my-7 items-end cursor-pointer"
 			>
 				<div className="bg-white h-0.5 w-10"></div>
 				<div className="bg-white h-0.5 w-4"></div>

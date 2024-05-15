@@ -9,12 +9,12 @@ import {
 	RouterProvider,
 	useLocation,
 } from "react-router-dom";
-// const Home = React.lazy(() => import("./components/Home"));
+import JackImg from "./assets/Layer 1 copy-black-white.png";
 const Home = React.lazy(() => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(import("./components/Home"));
-		}, 2500); // Delay of 1 second (1000 milliseconds)
+		}, 2500);
 	});
 });
 const About = React.lazy(() => import("./components/About"));
@@ -26,36 +26,43 @@ import Footer from "./components/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollTop from "./components/ScrollTop";
 import { handleScrollTop } from "./utils";
-import JackImg from "./assets/Layer 1 copy-black-white.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const AppLayout = () => {
 	const [headerShow, setHeaderShow] = useState(false);
 	const { pathname } = useLocation();
-	const scrollBox = useRef("");
 	// Use LOCOMotiveScroll -----------------------------
+	// const scrollBox = useRef("");
 	// useEffect(() => {
 	// 	const scroll = new LocomotiveScroll({
-	// 		el: document.querySelector("#scroll"),
+	// 		el: document.querySelector(".scrollPage"),
 	// 		smooth: true,
 	// 	});
 	// }, [scrollBox.current, scroll]);
-
+	// Scroll to top of page --------------------------------
 	useEffect(() => {
 		handleScrollTop();
 	}, [pathname]);
-
+	// Theme changes --------------------------------
+	const [theme, setTheme] = useState("dark");
+	const handleTheme = () => {
+		if (theme === "dark") {
+			setTheme("light");
+		} else {
+			setTheme("dark");
+		}
+	};
 	return (
 		<div
-			data-scroll-container
-			id="scroll"
-			className="sticky"
-			ref={scrollBox}
+			id={theme}
+			// data-scroll-container
+			// className="sticky scrollPage"
+			// ref={scrollBox}
 		>
 			<div
-				data-scroll
-				data-scroll-sticky
-				data-scroll-target="#scroll"
+				// data-scroll
+				// data-scroll-sticky
+				// data-scroll-target=".scrollPage"
 				className="relative z-50"
 			>
 				<SubHeader setHeaderShow={setHeaderShow} />
