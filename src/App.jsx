@@ -66,10 +66,10 @@ const AppLayout = () => {
 			<div className="fixed bottom-0 z-30 w-full">
 				<Links />
 			</div>
-			<div className="fixed bottom-0 z-50 w-full">
+			<Footer />
+			<div className="fixed bottom-0 z-40 w-full">
 				<ScrollTop />
 			</div>
-			<Footer />
 		</div>
 	);
 };

@@ -17,10 +17,10 @@ const Home = () => {
 		});
 		gsap.from("#logo-box", {
 			duration: 1,
-			rotate: 90,
 			opacity: 0,
-			y: "-100%",
-			// stagger: 0.05,
+			// rotate: 90,
+			// y: "-100%",
+			scale: 0,
 			animation: "easeOutQuad",
 		});
 		gsap.to("#text-scroll span", {
