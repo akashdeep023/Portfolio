@@ -16,7 +16,7 @@ const Home = () => {
 			animation: "easeOutQuad",
 		});
 		gsap.from("#logo-box", {
-			duration: 2,
+			duration: 1.5,
 			opacity: 0,
 			// rotate: 90,
 			// y: "-100%",
@@ -31,10 +31,11 @@ const Home = () => {
 		});
 		gsap.to("#home1 .home1-scroll", {
 			y: (index) => (index === 0 ? -150 : 0),
-			x: (index) => (index === 1 ? -150 : 0),
+			x: (index) => (index === 1 ? "-50%" : 0),
 
 			stagger: 0.7,
 			opacity: 0,
+			scale: (index) => (index === 0 ? 0.7 : 1),
 			scrollTrigger: {
 				trigger: "#home1",
 				scroller: "body",
