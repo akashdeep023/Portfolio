@@ -26,7 +26,7 @@ import Footer from "./components/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollTop from "./components/ScrollTop";
 import { handleScrollTop } from "./utils";
-import JackImg from "../assets/Layer 1 copy-black-white.png";
+import JackImg from "./assets/Layer 1 copy-black-white.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const AppLayout = () => {
