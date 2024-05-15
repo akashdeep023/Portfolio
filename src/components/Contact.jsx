@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Heading from "./Heading";
 
 const Contact = () => {
 	const name = useRef("");
@@ -14,11 +15,7 @@ const Contact = () => {
 	};
 	return (
 		<div className="w-full min-full mb-4 sm:mb-8">
-			<div className="w-full text-center">
-				<h1 className="text-2xl sm:text-4xl my-4 font-bold">
-					Reach out to us for your queries.
-				</h1>
-			</div>
+			<Heading text={"Reach out to us for your queries."} />
 			<div className="flex items-center justify-center w-full h-full">
 				<form
 					className="w-[85%] sm:w-[60%] min-w-72 flex flex-col gap-3"

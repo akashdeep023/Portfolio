@@ -4,7 +4,14 @@ import LocomotiveScroll from "locomotive-scroll";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-const Home = React.lazy(() => import("./components/Home"));
+// const Home = React.lazy(() => import("./components/Home"));
+const Home = React.lazy(() => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(import("./components/Home"));
+		}, 1000); // Delay of 1 second (1000 milliseconds)
+	});
+});
 const About = React.lazy(() => import("./components/About"));
 const Contact = React.lazy(() => import("./components/Contact"));
 const Project = React.lazy(() => import("./components/Project"));
@@ -60,7 +67,6 @@ const appRouter = createBrowserRouter([
 				element: (
 					<Suspense fallback={<FrontPage />}>
 						<Home />
-						{/* <FrontPage /> */}
 					</Suspense>
 				),
 			},
@@ -97,11 +103,11 @@ const appRouter = createBrowserRouter([
 				),
 			},
 		],
-		// errorElement: (
-		// 	<Suspense fallback={<FrontPage />}>
-		// 		<div>Something went wrong</div>
-		// 	</Suspense>
-		// ),
+		errorElement: (
+			<Suspense fallback={<FrontPage />}>
+				<div>Something went wrong</div>
+			</Suspense>
+		),
 	},
 ]);
 function App() {

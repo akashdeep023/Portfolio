@@ -11,7 +11,7 @@ const Home = () => {
 		gsap.from("#home h1", {
 			duration: 1,
 			opacity: 0,
-			y: 50,
+			y: 100,
 			stagger: 0.08,
 			animation: "easeOutQuad",
 		});
@@ -56,7 +56,7 @@ const Home = () => {
 					<div className="font-bold p-3 ">
 						<h1 className="text-2xl sm:text-3xl">
 							Hello I'm{" "}
-							<span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+							<span className="bg-gradient-to-r from-red-700 to-blue-700 inline-block text-transparent bg-clip-text">
 								Akash Deep
 							</span>
 						</h1>
@@ -95,7 +95,9 @@ const Home = () => {
 					</span>
 				</div>
 			</div>
-			<div id="home2" className="w-full h-dvh light-green"></div>
+			<div id="home2" className="w-full h-dvh light-green">
+				<div></div>
+			</div>
 		</div>
 	);
 };
