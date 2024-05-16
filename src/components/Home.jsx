@@ -57,9 +57,7 @@ const Home = () => {
 					<div className="font-bold p-3 ">
 						<h1 className="text-2xl sm:text-3xl">
 							Hello I'm{" "}
-							<span className="bg-gradient-to-r from-red-700 to-blue-700 inline-block text-transparent bg-clip-text">
-								Akash Deep
-							</span>
+							<span className="heading-color">Akash Deep</span>
 						</h1>
 						<h1 className="text-3xl sm:text-5xl">
 							Full Stack Developer

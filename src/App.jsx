@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import {
 	createBrowserRouter,
+	Link,
 	Outlet,
 	RouterProvider,
 	useLocation,
@@ -30,7 +31,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AppLayout = () => {
 	const [headerShow, setHeaderShow] = useState(false);
+	const [scrollShow, setScrollShow] = useState(true);
 	const { pathname } = useLocation();
+
 	// Use LOCOMotiveScroll -----------------------------
 	// const scrollBox = useRef("");
 	// useEffect(() => {
@@ -39,10 +42,24 @@ const AppLayout = () => {
 	// 		smooth: true,
 	// 	});
 	// }, [scrollBox.current, scroll]);
+
 	// Scroll to top of page --------------------------------
 	useEffect(() => {
 		handleScrollTop();
 	}, [pathname]);
+
+	// Scroll btn hide --------------------------------
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			var currentScrollPos = window.pageYOffset;
+			if (currentScrollPos > 80) {
+				setScrollShow(false);
+			} else {
+				setScrollShow(true);
+			}
+		});
+	}, []);
+
 	// Theme changes --------------------------------
 	const [theme, setTheme] = useState("dark");
 	const handleTheme = () => {
@@ -59,28 +76,30 @@ const AppLayout = () => {
 			// className="sticky scrollPage"
 			// ref={scrollBox}
 		>
-			<div
-				// data-scroll
-				// data-scroll-sticky
-				// data-scroll-target=".scrollPage"
-				className="relative z-50"
-			>
-				<SubHeader setHeaderShow={setHeaderShow} />
-				{headerShow && <Header setHeaderShow={setHeaderShow} />}
-			</div>
-			<div className="h-14 sm:h-16 md:h-20 dark-green w-full"></div>
-			<div className="app-layout-content w-full min-h-[90vh] light-green overflow-hidden">
-				<Outlet />
-			</div>
-			<div className={headerShow ? "hidden" : "block"}>
-				<div className="fixed bottom-0 z-30 w-full">
-					<Links theme={theme} handleTheme={handleTheme} />
+			<div className="containerBox">
+				<div
+					// data-scroll
+					// data-scroll-sticky
+					// data-scroll-target=".scrollPage"
+					className="relative z-50"
+				>
+					<SubHeader setHeaderShow={setHeaderShow} />
+					{headerShow && <Header setHeaderShow={setHeaderShow} />}
 				</div>
-			</div>
-			<Footer />
-			<div className={headerShow ? "hidden" : "block"}>
-				<div className="fixed bottom-0 z-40 w-full">
-					<ScrollTop />
+				<div className="h-14 sm:h-16 md:h-20 dark-green w-full"></div>
+				<div className="app-layout-content w-full min-h-[90vh] light-green overflow-hidden">
+					<Outlet />
+				</div>
+				<div className={headerShow ? "hidden" : "block"}>
+					<div className="fixed bottom-0 z-30 w-full">
+						<Links theme={theme} handleTheme={handleTheme} />
+					</div>
+				</div>
+				<Footer />
+				<div className={headerShow || scrollShow ? "hidden" : "block"}>
+					<div className="fixed bottom-0 z-40 w-full">
+						<ScrollTop />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -135,9 +154,14 @@ const appRouter = createBrowserRouter([
 		],
 		errorElement: (
 			<Suspense fallback={<FrontPage />}>
-				<div>
-					<h1>Something went wrong</h1>
-					<h1>404 | Bad request</h1>
+				<div className="w-full h-dvh flex items-center justify-center">
+					<h1 className="text-xl sm:text-2xl font-bold">
+						Something went wrong
+					</h1>
+					<h1 className="text-lg sm:text-xl font-bold">
+						404 | Bad request
+					</h1>
+					<Link to={"/"}>Home</Link>
 				</div>
 			</Suspense>
 		),

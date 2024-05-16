@@ -35,7 +35,7 @@
 
 #light .dark-green {
     background-color: #303030;
-    color: #bdbdbd;
+    color: #717171;
 }
 
 #dark .dark-green-text {
@@ -54,7 +54,7 @@
 
 #light .light-green {
     background-color: #4c504c;
-    color: #fff;
+    color: #000;
 }
 
 #dark .lighter-green {
@@ -81,8 +81,7 @@ body {
     width: 100%;
     height: 100%;
     user-select: none !important;
-    background-color: #012806;
-    color: #fff;
+
 }
 
 body::-webkit-scrollbar {
@@ -94,6 +93,31 @@ body::-webkit-scrollbar {
     font-family: PP;
     font-weight: 300;
 }
+
+#dark .containerBox {
+    background-color: #012806;
+    color: #fff;
+}
+
+#light .containerBox {
+    background-color: #313131;
+    color: #000000;
+}
+
+#dark .heading-color {
+    background: linear-gradient(to left, #ffee00, #ff0000);
+    display: inline-block;
+    color: transparent;
+    background-clip: text;
+}
+
+#light .heading-color {
+    background: linear-gradient(to right, #000000, #0d00ff);
+    display: inline-block;
+    color: transparent;
+    background-clip: text;
+}
+
 
 #name {
     font-family: PP;
@@ -125,7 +149,7 @@ span {
 
 #light .btn-style {
     background-color: #656a64;
-    color: #000;
+    color: #fff;
 }
 
 #dark .btn-style:hover {
