@@ -154,7 +154,7 @@ const appRouter = createBrowserRouter([
 		],
 		errorElement: (
 			<Suspense fallback={<FrontPage />}>
-				<div className="w-full h-dvh flex items-center justify-center">
+				<div className="w-full h-dvh flex flex-col items-center justify-center">
 					<h1 className="text-xl sm:text-2xl font-bold">
 						Something went wrong
 					</h1>
