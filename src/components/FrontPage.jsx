@@ -34,7 +34,7 @@ const FrontPage = () => {
 			>
 				<div
 					id="load-box"
-					className="size-48 sm:size-56 border border-l-traborder-r-transparent rounded-full flex items-center justify-center"
+					className="size-48 sm:size-56 border border-b-transparent rounded-full flex items-center justify-center"
 				></div>
 			</div>
 			<h1 id="load-name-big" className="text-4xl sm:text-5xl absolute">

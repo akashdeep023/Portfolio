@@ -46,7 +46,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			id="subHeader"
 			className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green"
 		>
-			<Link to={"/"}>
+			<a href="/">
 				<div id="name" className="text-2xl p-2">
 					<span>A</span>
 					<span>k</span>
@@ -59,7 +59,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 					<span>e</span>
 					<span>p</span>
 				</div>
-			</Link>
+			</a>
 			<div
 				id="menu"
 				onClick={() => setHeaderShow(true)}
