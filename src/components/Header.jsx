@@ -1,25 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 
 export const SubHeader = ({ setHeaderShow }) => {
-	useGSAP(() => {
-		gsap.from("#name span", {
-			duration: 0.3,
-			opacity: 0,
-			y: -50,
-			stagger: 0.05,
-			animation: "easeOutQuad",
-		});
-		gsap.from("#menu div", {
-			duration: 0.3,
-			opacity: 0,
-			x: 80,
-			stagger: 0.08,
-			animation: "easeOutQuad",
-		});
-	});
+	const subHeader = useRef();
+	useGSAP(
+		() => {
+			gsap.from("#name span", {
+				duration: 0.3,
+				opacity: 0,
+				y: -50,
+				stagger: 0.05,
+				animation: "easeOutQuad",
+			});
+			gsap.from("#menu div", {
+				duration: 0.3,
+				opacity: 0,
+				x: 80,
+				stagger: 0.08,
+				animation: "easeOutQuad",
+			});
+		},
+		{ scope: subHeader }
+	);
 
 	useEffect(() => {
 		var prevScrollPos = window.pageYOffset;
@@ -38,6 +42,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 
 	return (
 		<div
+			ref={subHeader}
 			id="subHeader"
 			className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green"
 		>
@@ -69,73 +74,74 @@ export const SubHeader = ({ setHeaderShow }) => {
 };
 
 const Header = ({ setHeaderShow }) => {
-	let closeHeaderAnimation;
-	let hoverHeaderAnimation;
-	let hoverOutHeaderAnimation;
-	useGSAP(() => {
-		let tl = gsap.timeline();
-		tl.from("#header>div", {
-			duration: 0.3,
-			opacity: 0,
-			y: "-100%",
-			stagger: 0.3,
-			animation: "easeOutQuad",
-		});
-		tl.from("#name-big", {
-			duration: 0.2,
-			opacity: 0,
-			y: "50%",
-			animation: "easeOutQuad",
-		});
-
-		tl.from("#nav-link p", {
-			duration: 0.3,
-			opacity: 0,
-			x: "100%",
-			stagger: 0.15,
-			animation: "easeOutQuad",
-		});
-		closeHeaderAnimation = () => {
-			tl.to("#header>div", {
+	const header = useRef();
+	useGSAP(
+		() => {
+			let tl = gsap.timeline();
+			tl.from("#header>div", {
 				duration: 0.3,
 				opacity: 0,
 				y: "-100%",
 				stagger: 0.3,
-				reversed: true,
 				animation: "easeOutQuad",
 			});
-		};
-		hoverHeaderAnimation = (e) => {
-			gsap.to("." + e.className, {
+			tl.from("#name-big", {
 				duration: 0.2,
-				opacity: 1,
-				color: "#fff",
-				stagger: 0.05,
+				opacity: 0,
+				y: "50%",
 				animation: "easeOutQuad",
 			});
-		};
-		hoverOutHeaderAnimation = (e) => {
-			gsap.to("." + e.className, {
-				duration: 0.2,
-				opacity: 1,
+
+			tl.from("#nav-link p", {
+				duration: 0.3,
+				opacity: 0,
+				x: "100%",
+				stagger: 0.15,
+				animation: "easeOutQuad",
+			});
+			const tt = gsap.timeline({ repeat: -1 });
+			tt.to("#name-big span", {
+				duration: 0.7,
+				stagger: 0.1,
+				color: "white",
+				animation: "easeOutQuad",
+			});
+			tt.to("#name-big span", {
+				duration: 0.7,
+				stagger: 0.1,
 				color: "#052210",
-				stagger: 0.05,
 				animation: "easeOutQuad",
 			});
-		};
-	});
-	useGSAP(() => {
-		const tt = gsap.timeline({ repeat: -1 });
-		tt.to("#name-big span", {
-			duration: 0.7,
-			stagger: 0.1,
-			color: "white",
+		},
+		{ scope: header }
+	);
+	const { contextSafe } = useGSAP({ scope: header });
+	let tl = gsap.timeline();
+	const closeHeaderAnimation = contextSafe(() => {
+		tl.to("#header>div", {
+			duration: 0.3,
+			opacity: 0,
+			y: "-100%",
+			stagger: 0.3,
+			reversed: true,
 			animation: "easeOutQuad",
 		});
-		tt.to("#name-big span", {
-			duration: 0.7,
-			stagger: 0.1,
+	});
+	const hoverHeaderAnimation = contextSafe((e) => {
+		gsap.to("." + e.className, {
+			duration: 0.2,
+			opacity: 1,
+			color: "#fff",
+			stagger: 0.05,
+			animation: "easeOutQuad",
+		});
+	});
+	const hoverOutHeaderAnimation = contextSafe((e) => {
+		gsap.to("." + e.className, {
+			duration: 0.2,
+			opacity: 1,
 			color: "#052210",
+			stagger: 0.05,
 			animation: "easeOutQuad",
 		});
 	});
@@ -152,7 +158,7 @@ const Header = ({ setHeaderShow }) => {
 		hoverOutHeaderAnimation(e);
 	};
 	return (
-		<div id="header" className="fixed w-full h-[90vh] top-0">
+		<div ref={header} id="header" className="fixed w-full h-[90vh] top-0">
 			<div className="dark-green text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
 				<div className="font-semibold text-sm sm:text-base">
 					Full Stack Developer | MERN Stack Specialist | Java | C++ |
