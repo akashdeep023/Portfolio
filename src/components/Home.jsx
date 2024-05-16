@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 	useGSAP(() => {
-		gsap.from("#home h1", {
+		gsap.from(".home1-scroll > div > h1", {
 			duration: 1,
 			opacity: 0,
 			y: 100,
@@ -39,6 +39,21 @@ const Home = () => {
 				// start: "top 3%",
 				end: "top -50%",
 				scrub: 1,
+			},
+		});
+
+		gsap.from(".home2-fam > div ", {
+			duration: 5,
+			opacity: 0,
+			y: 100,
+			stagger: 0.8,
+			animation: "easeOutQuad",
+			scrollTrigger: {
+				trigger: "#home2",
+				scroller: "body",
+				start: "top 80%",
+				end: "top 20%",
+				scrub: 2,
 			},
 		});
 	});
@@ -130,8 +145,26 @@ const Home = () => {
 				</div>
 			</div>
 			<div id="home2" className="w-full h-dvh light-green">
-				<div></div>
+				<div className="home2-fam flex flex-wrap sm:flex-nowrap justify-evenly p-10">
+					<div className="h-32 sm:h-60 min-w-32 w-1/5 m-1 border-2 rounded-2xl lighter-green flex items-center justify-center flex-col font-bold text-2xl">
+						<i>1.7 K</i>
+						<h1>LinkedIn Family</h1>
+					</div>
+					<div className="h-32 sm:h-60 min-w-32 w-1/5 m-1 border-2 rounded-2xl lighter-green flex items-center justify-center flex-col font-bold text-2xl">
+						<i>1.7 K</i>
+						<h1>LinkedIn Family</h1>
+					</div>
+					<div className="h-32 sm:h-60 min-w-32 w-1/5 m-1 border-2 rounded-2xl lighter-green flex items-center justify-center flex-col font-bold text-2xl">
+						<i>1.7 K</i>
+						<h1>LinkedIn Family</h1>
+					</div>
+					<div className="h-32 sm:h-60 min-w-32 w-1/5 m-1 border-2 rounded-2xl lighter-green flex items-center justify-center flex-col font-bold text-2xl">
+						<i>1.7 K</i>
+						<h1>LinkedIn Family</h1>
+					</div>
+				</div>
 			</div>
+			<div id="home3" className="w-full h-dvh bg-green-gradient"></div>
 		</div>
 	);
 };
