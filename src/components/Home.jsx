@@ -6,48 +6,44 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-	const home = useRef();
-	useGSAP(
-		() => {
-			gsap.from("#home h1", {
-				duration: 1,
-				opacity: 0,
-				y: 100,
-				stagger: 0.1,
-				animation: "easeOutQuad",
-			});
-			gsap.from("#logo-box", {
-				duration: 1.5,
-				opacity: 0,
-				rotate: 30,
-				animation: "easeOutQuad",
-			});
-			gsap.to("#text-scroll span", {
-				x: "-100%",
-				duration: 65,
-				ease: "none",
-				repeat: -1,
-			});
-			gsap.to("#home1 .home1-scroll", {
-				y: (index) => (index === 0 ? -150 : 0),
-				x: (index) => (index === 1 ? "-50%" : 0),
-				stagger: 0.7,
-				opacity: 0,
-				scale: (index) => (index === 0 ? 0.7 : 1),
-				scrollTrigger: {
-					trigger: "#home1",
-					scroller: "body",
-					start: "top 7.5%",
-					// start: "top 3%",
-					end: "top -50%",
-					scrub: 1,
-				},
-			});
-		}
-		// { scope: home }
-	);
+	useGSAP(() => {
+		gsap.from("#home h1", {
+			duration: 1,
+			opacity: 0,
+			y: 100,
+			stagger: 0.1,
+			animation: "easeOutQuad",
+		});
+		gsap.to("#img-box > div > div", {
+			duration: 1,
+			opacity: 0,
+			stagger: 0.06,
+			animation: "easeOutQuad",
+		});
+		gsap.to("#text-scroll span", {
+			x: "-100%",
+			duration: 65,
+			ease: "none",
+			repeat: -1,
+		});
+		gsap.to("#home1 .home1-scroll", {
+			y: (index) => (index === 0 ? -150 : 0),
+			x: (index) => (index === 1 ? "-50%" : 0),
+			stagger: 0.7,
+			opacity: 0,
+			scale: (index) => (index === 0 ? 0.7 : 1),
+			scrollTrigger: {
+				trigger: "#home1",
+				scroller: "body",
+				start: "top 7.5%",
+				// start: "top 3%",
+				end: "top -50%",
+				scrub: 1,
+			},
+		});
+	});
 	return (
-		<div ref={home} id="home" className="h-full w-full">
+		<div id="home" className="h-full w-full">
 			<div
 				id="home1"
 				className="bg-green-gradient min-h-dvl pt-4 sm:pt-16"
@@ -72,13 +68,53 @@ const Home = () => {
 					</div>
 					<div
 						id="logo-box"
-						className="size-72 sm:size-80 md:size-96 object-contain flex items-end rotate-6"
+						className="size-72 sm:size-80 md:size-96 min-h-fit object-contain flex items-end relative"
 					>
 						<img
 							src={JackImg}
 							alt="Jack"
 							className="object-cover rounded-b-2xl"
 						/>
+						<div
+							id="img-box"
+							className="flex flex-col grow absolute h-full w-full top-0 left-0"
+						>
+							<div className="flex grow">
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+							</div>
+							<div className="flex grow">
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+							</div>
+							<div className="flex grow">
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+							</div>
+							<div className="flex grow">
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+							</div>
+							<div className="flex grow">
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+								<div className="backdrop-blur-sm border h-full w-full"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div
