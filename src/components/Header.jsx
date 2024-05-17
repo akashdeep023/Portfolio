@@ -60,7 +60,8 @@ export const SubHeader = ({ setHeaderShow }) => {
 					<span>p</span>
 				</div>
 			</a>
-			<div
+			<Link
+				to={"#menu"}
 				id="menu"
 				onClick={() => setHeaderShow(true)}
 				className="flex flex-col gap-2 my-5 sm:my-6 md:my-7 items-end cursor-pointer"
@@ -68,7 +69,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 				<div className="bg-white h-0.5 w-10"></div>
 				<div className="bg-white h-0.5 w-4"></div>
 				<div className="bg-white h-0.5 w-8"></div>
-			</div>
+			</Link>
 		</div>
 	);
 };
@@ -157,6 +158,29 @@ const Header = ({ setHeaderShow }) => {
 	const hoverOutHeader = (e) => {
 		hoverOutHeaderAnimation(e);
 	};
+	// Cursor Zoom -----------------------------
+	useEffect(() => {
+		const handleMouseEnter = () => {
+			document.getElementById("cursor").classList.add("hover");
+			document.getElementById("cursor").innerHTML = "Click";
+		};
+		const handleMouseLeave = () => {
+			document.getElementById("cursor").classList.remove("hover");
+			document.getElementById("cursor").innerHTML = "";
+		};
+		const links = document.querySelectorAll("a");
+		links.forEach((link) => {
+			link.addEventListener("mouseenter", handleMouseEnter);
+			link.addEventListener("mouseleave", handleMouseLeave);
+		});
+
+		return () => {
+			links.forEach((link) => {
+				link.removeEventListener("mouseenter", handleMouseEnter);
+				link.removeEventListener("mouseleave", handleMouseLeave);
+			});
+		};
+	}, []);
 	return (
 		<div ref={header} id="header" className="fixed w-full h-[90vh] top-0">
 			<div className="dark-green text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
@@ -178,13 +202,14 @@ const Header = ({ setHeaderShow }) => {
 				</div>
 			</div>
 			<div className="lighter-green dark-green-text text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
-				<div
+				<Link
+					to={"#menu"}
 					onClick={closeHeader}
-					className="flex flex-col gap-3 mx-2 sm:mx-4 md:mx-6 my-6 sm:my-7 md:my-8 absolute top-0 right-0  cursor-pointer"
+					className="flex flex-col gap-3 mx-2 sm:mx-4 md:mx-6 my-6 sm:my-7 md:my-8 absolute top-0 right-0 cursor-pointer"
 				>
 					<div className="bg-green-950 h-0.5 w-10 origin-left rotate-45"></div>
 					<div className="bg-green-950 h-0.5 w-8 origin-left -rotate-45"></div>
-				</div>
+				</Link>
 				<p id="name-big" className="sm:text-7xl md:text-8xl text-6xl">
 					<span>A</span>
 					<span>k</span>

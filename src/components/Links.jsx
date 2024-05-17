@@ -7,6 +7,7 @@ import {
 	FaSun,
 } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const Links = ({ theme, handleTheme }) => {
 	return (
@@ -44,7 +45,8 @@ const Links = ({ theme, handleTheme }) => {
 				>
 					<GoMail fontSize={"25px"} />
 				</a>
-				<div
+				<Link
+					to={"#theme"}
 					className="cursor-pointer border-b-2 border-white/50 pt-2 pb-1 px-1 border-spacing-y-2"
 					onClick={handleTheme}
 				>
@@ -53,7 +55,7 @@ const Links = ({ theme, handleTheme }) => {
 					) : (
 						<FaMoon fontSize={"24px"} />
 					)}
-				</div>
+				</Link>
 			</div>
 		</div>
 	);

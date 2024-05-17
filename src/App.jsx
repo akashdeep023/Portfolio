@@ -66,16 +66,18 @@ const AppLayout = () => {
 			var curY = e.clientY;
 			document.getElementById("cursor").style.left = curX - 25 + "px";
 			document.getElementById("cursor").style.top = curY - 25 + "px";
-			document.getElementById("cursor").style.display = "block";
+			document.getElementById("cursor").style.display = "flex";
 		};
 		const handleCursorOut = (e) => {
-			document.getElementById("cursor").style.display = "hidden";
+			document.getElementById("cursor").style.display = "none";
 		};
 		const handleMouseEnter = () => {
 			document.getElementById("cursor").classList.add("hover");
+			document.getElementById("cursor").innerHTML = "Click";
 		};
 		const handleMouseLeave = () => {
 			document.getElementById("cursor").classList.remove("hover");
+			document.getElementById("cursor").innerHTML = "";
 		};
 		const links = document.querySelectorAll("a");
 		links.forEach((link) => {
