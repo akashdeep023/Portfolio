@@ -68,12 +68,12 @@ const AppLayout = () => {
 			document.getElementById("cursor").style.top = curY - 25 + "px";
 			document.getElementById("cursor").style.display = "flex";
 		};
-		const handleCursorOut = (e) => {
+		const handleCursorOut = () => {
 			document.getElementById("cursor").style.display = "none";
 		};
-		const handleMouseEnter = () => {
+		const handleMouseEnter = (dataName) => {
 			document.getElementById("cursor").classList.add("hover");
-			document.getElementById("cursor").innerHTML = "Click";
+			document.getElementById("cursor").innerHTML = dataName || "Click";
 		};
 		const handleMouseLeave = () => {
 			document.getElementById("cursor").classList.remove("hover");
@@ -81,7 +81,10 @@ const AppLayout = () => {
 		};
 		const links = document.querySelectorAll("a");
 		links.forEach((link) => {
-			link.addEventListener("mouseenter", handleMouseEnter);
+			const dataName = link.getAttribute("dataname");
+			link.addEventListener("mouseenter", () =>
+				handleMouseEnter(dataName)
+			);
 			link.addEventListener("mouseleave", handleMouseLeave);
 		});
 
@@ -139,7 +142,7 @@ const AppLayout = () => {
 						<ScrollTop />
 					</div>
 				</div>
-				<div id="cursor"></div>
+				<div id="cursor" className="line-clamp-1"></div>
 			</div>
 		</div>
 	);

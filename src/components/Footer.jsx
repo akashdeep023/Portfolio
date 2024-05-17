@@ -24,6 +24,7 @@ const Footer = () => {
 
 							<li>
 								<a
+									dataname="E-Mail"
 									className="hover:text-green-700 hover:underline"
 									href="mailto:contact.akashdeep023@gmail.com"
 									target="_blank"
@@ -56,6 +57,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
+									dataname="Home"
 									className="hover:text-green-700 hover:underline"
 									to={"/"}
 								>
@@ -64,6 +66,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
+									dataname="About"
 									className="hover:text-green-700 hover:underline"
 									to={"/about"}
 								>
@@ -72,6 +75,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
+									dataname="Project"
 									className="hover:text-green-700 hover:underline"
 									to={"/project"}
 								>
@@ -80,6 +84,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
+									dataname="Contact"
 									className="hover:text-green-700 hover:underline"
 									to={"/contact"}
 								>
@@ -95,6 +100,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
+									dataname="LinkedIn"
 									className="hover:text-green-700 hover:underline"
 									href="https://www.linkedin.com/in/akashdeep023/"
 									target="_blank"
@@ -105,6 +111,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
+									dataname="GitHub"
 									className="hover:text-green-700 hover:underline"
 									href="https://github.com/akashdeep023/"
 									target="_blank"
@@ -115,6 +122,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
+									dataname="Instagram"
 									className="hover:text-green-700 hover:underline"
 									href="https://instagram.com/akashdeep023_/"
 									target="_blank"
@@ -125,6 +133,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
+									dataname="E-Mail"
 									className="hover:text-green-700 hover:underline"
 									href="mailto:contact.akashdeep023@gmail.com"
 									target="_blank"

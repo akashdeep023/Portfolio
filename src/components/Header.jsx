@@ -46,7 +46,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			id="subHeader"
 			className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green"
 		>
-			<a href="/">
+			<a dataname="Jack" href="/">
 				<div id="name" className="text-2xl p-2">
 					<span>A</span>
 					<span>k</span>
@@ -160,9 +160,9 @@ const Header = ({ setHeaderShow }) => {
 	};
 	// Cursor Zoom -----------------------------
 	useEffect(() => {
-		const handleMouseEnter = () => {
+		const handleMouseEnter = (dataName) => {
 			document.getElementById("cursor").classList.add("hover");
-			document.getElementById("cursor").innerHTML = "Click";
+			document.getElementById("cursor").innerHTML = dataName || "Click";
 		};
 		const handleMouseLeave = () => {
 			document.getElementById("cursor").classList.remove("hover");
@@ -170,7 +170,10 @@ const Header = ({ setHeaderShow }) => {
 		};
 		const links = document.querySelectorAll("a");
 		links.forEach((link) => {
-			link.addEventListener("mouseenter", handleMouseEnter);
+			const dataName = link.getAttribute("dataname");
+			link.addEventListener("mouseenter", () =>
+				handleMouseEnter(dataName)
+			);
 			link.addEventListener("mouseleave", handleMouseLeave);
 		});
 
@@ -226,7 +229,7 @@ const Header = ({ setHeaderShow }) => {
 					id="nav-link"
 					className="flex flex-col gap-4 items-start font-bold"
 				>
-					<Link to={"/"}>
+					<Link dataname="Home" to={"/"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
@@ -239,7 +242,7 @@ const Header = ({ setHeaderShow }) => {
 							<span className="home-text">e</span>
 						</p>
 					</Link>
-					<Link to={"/about"}>
+					<Link dataname="About" to={"/about"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
@@ -253,7 +256,7 @@ const Header = ({ setHeaderShow }) => {
 							<span className="about-text">t</span>
 						</p>
 					</Link>
-					<Link to={"/project"}>
+					<Link dataname="Project" to={"/project"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
@@ -269,7 +272,7 @@ const Header = ({ setHeaderShow }) => {
 							<span className="project-text">t</span>
 						</p>
 					</Link>
-					<Link to={"/contact"}>
+					<Link dataname="Contact" to={"/contact"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}

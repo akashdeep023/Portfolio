@@ -14,6 +14,7 @@ const Links = ({ theme, handleTheme }) => {
 		<div className="flex items-center justify-center w-full ">
 			<div className="flex items-center justify-center gap-6 sm:gap-10 backdrop-blur-md px-6 sm:px-10 py-3 sm:py-4 rounded-t-3xl border-t-2">
 				<a
+					dataname="LinkedIn"
 					href="https://www.linkedin.com/in/akashdeep023/"
 					target="_blank"
 					rel="noreferrer"
@@ -22,6 +23,7 @@ const Links = ({ theme, handleTheme }) => {
 					<FaLinkedinIn fontSize={"25px"} />
 				</a>
 				<a
+					dataname="GitHub"
 					href="https://github.com/akashdeep023/"
 					target="_blank"
 					rel="noreferrer"
@@ -30,6 +32,7 @@ const Links = ({ theme, handleTheme }) => {
 					<FaGithubAlt fontSize={"25px"} />
 				</a>
 				<a
+					dataname="Instagram"
 					href="https://instagram.com/akashdeep023_/"
 					target="_blank"
 					rel="noreferrer"
@@ -38,6 +41,7 @@ const Links = ({ theme, handleTheme }) => {
 					<FaInstagram fontSize={"25px"} />
 				</a>
 				<a
+					dataname="E-Mail"
 					href="mailto:contact.akashdeep023@gmail.com"
 					target="_blank"
 					rel="noreferrer"
@@ -46,6 +50,7 @@ const Links = ({ theme, handleTheme }) => {
 					<GoMail fontSize={"25px"} />
 				</a>
 				<Link
+					dataname="Theme"
 					to={"#theme"}
 					className="cursor-pointer border-b-2 border-white/50 pt-2 pb-1 px-1 border-spacing-y-2"
 					onClick={handleTheme}

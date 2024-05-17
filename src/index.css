@@ -198,7 +198,7 @@ span {
     transition: transform .5s ease;
     align-items: center;
     justify-content: center;
-    font-size: .7rem;
+    font-size: 8px;
     backdrop-filter: blur(10px);
 
 }
@@ -213,4 +213,8 @@ span {
 
 #cursor.hover {
     transform: scale(1.5);
+}
+
+a:hover {
+    cursor: none;
 }
