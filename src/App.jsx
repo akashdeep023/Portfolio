@@ -59,6 +59,42 @@ const AppLayout = () => {
 			}
 		});
 	}, []);
+	// Cursor position --------------------------------
+	useEffect(() => {
+		const handleCursorMove = (e) => {
+			var curX = e.clientX;
+			var curY = e.clientY;
+			document.getElementById("cursor").style.left = curX - 25 + "px";
+			document.getElementById("cursor").style.top = curY - 25 + "px";
+			document.getElementById("cursor").style.display = "block";
+		};
+		const handleCursorOut = (e) => {
+			document.getElementById("cursor").style.display = "hidden";
+		};
+		const handleMouseEnter = () => {
+			document.getElementById("cursor").classList.add("hover");
+		};
+		const handleMouseLeave = () => {
+			document.getElementById("cursor").classList.remove("hover");
+		};
+		const links = document.querySelectorAll("a");
+		links.forEach((link) => {
+			link.addEventListener("mouseenter", handleMouseEnter);
+			link.addEventListener("mouseleave", handleMouseLeave);
+		});
+
+		document.addEventListener("mousemove", handleCursorMove);
+		document.addEventListener("mouseleave", handleCursorOut);
+
+		return () => {
+			document.removeEventListener("mousemove", handleCursorMove);
+			document.removeEventListener("mouseleave", handleCursorOut);
+			links.forEach((link) => {
+				link.removeEventListener("mouseenter", handleMouseEnter);
+				link.removeEventListener("mouseleave", handleMouseLeave);
+			});
+		};
+	}, []);
 
 	// Theme changes --------------------------------
 	const [theme, setTheme] = useState("dark");
@@ -76,7 +112,7 @@ const AppLayout = () => {
 			// className="sticky scrollPage"
 			// ref={scrollBox}
 		>
-			<div className="containerBox">
+			<div className="containerBox relative">
 				<div
 					// data-scroll
 					// data-scroll-sticky
@@ -101,6 +137,7 @@ const AppLayout = () => {
 						<ScrollTop />
 					</div>
 				</div>
+				<div id="cursor"></div>
 			</div>
 		</div>
 	);

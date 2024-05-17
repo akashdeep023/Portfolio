@@ -178,29 +178,27 @@ span {
     top: -80px;
 }
 
-#g-recaptcha-response {
-    display: block !important;
-    position: absolute;
-    margin: -50px 0 0 0 !important;
-    z-index: -999999;
-    opacity: 0;
-}
-
 /* -------------------------------- */
 /* #com-img {
     background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
 } */
 
-/* #cursor {
+#cursor {
     display: none;
-    transform: translate(-50%, -50%);
     transition-timing-function: ease;
-    background-color: #fff;
-    height: 5vw;
-    width: 5vw;
+    pointer-events: none;
+    height: 50px;
+    width: 50px;
     border: 1px solid #fff;
     border-radius: 50%;
     position: fixed;
     z-index: 1000;
-} */
+    top: 0;
+    right: 0;
+}
+
+#cursor.hover {
+    transform: scale(1.5);
+    /* Use transform for scaling */
+}
