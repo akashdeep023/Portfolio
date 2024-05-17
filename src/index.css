@@ -200,7 +200,6 @@ span {
     justify-content: center;
     font-size: 8px;
     backdrop-filter: blur(10px);
-
 }
 
 #dark #cursor {
@@ -217,4 +216,10 @@ span {
 
 a:hover {
     cursor: none;
+}
+
+@media (max-width: 1024px) {
+    #cursor {
+        display: none !important;
+    }
 }
