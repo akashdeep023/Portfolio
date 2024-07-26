@@ -142,7 +142,7 @@ const AppLayout = () => {
 						<ScrollTop />
 					</div>
 				</div>
-				<div id="cursor" className="line-clamp-1"></div>
+				<div id="cursor"></div>
 			</div>
 		</div>
 	);
