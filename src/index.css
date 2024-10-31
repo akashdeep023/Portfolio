@@ -27,54 +27,7 @@
 	font-weight: 800;
 }
 
-/* Color */
-#dark .dark-green {
-	background-color: #052210;
-	color: #fff;
-}
-
-#light .dark-green {
-	background-color: #303030;
-	color: #717171;
-}
-
-#dark .dark-green-text {
-	color: #052210;
-}
-
-#light .dark-green-text {
-	color: #052210;
-	/* color: #6a6a6a; */
-}
-
-#dark .light-green {
-	background-color: #0a4612;
-	color: #fff;
-}
-
-#light .light-green {
-	background-color: #4c504c;
-	color: #000;
-}
-
-#dark .lighter-green {
-	background-color: #43bf1c;
-}
-
-#light .lighter-green {
-	background-color: #d0d0d0;
-}
-
-#dark .lightest-green {
-	background-color: #deffbe;
-	color: #052210;
-}
-
-#light .lightest-green {
-	background-color: #ffffff;
-	color: #052210;
-}
-
+/* Boilerplate Style */
 html,
 body {
 	width: 100%;
@@ -86,34 +39,9 @@ body::-webkit-scrollbar {
 	display: none;
 }
 
-/* Style */
 #root {
 	font-family: PP;
 	font-weight: 300;
-}
-
-#dark .containerBox {
-	background-color: #0a4612;
-	color: #fff;
-}
-
-#light .containerBox {
-	background-color: #313131;
-	color: #000000;
-}
-
-#dark .heading-color {
-	background: linear-gradient(to left, #ffee00, #ff0000);
-	display: inline-block;
-	color: transparent;
-	background-clip: text;
-}
-
-#light .heading-color {
-	background: linear-gradient(to right, #000000, #0d00ff);
-	display: inline-block;
-	color: transparent;
-	background-clip: text;
 }
 
 #name {
@@ -123,7 +51,6 @@ body::-webkit-scrollbar {
 
 #name-big {
 	font-family: CR;
-	color: "#052210";
 }
 
 #load-name-big {
@@ -139,54 +66,25 @@ span {
 	display: inline-block;
 }
 
-#dark .btn-style {
-	background-color: #43bf1c;
-	color: #000;
-}
-
-#light .btn-style {
-	background-color: #656a64;
-	color: #fff;
-}
-
-#dark .btn-style:hover {
-	background-color: #052210;
-	color: #fff;
-}
-
-#light .btn-style:hover {
-	background-color: #1c1f1d;
-	color: #fff;
-}
-
-#dark .bg-green-gradient {
-	background: radial-gradient(
-		circle at top center,
-		#4ccf24 0%,
-		#43bf1c 10%,
-		#024e09 50%,
-		#003a06 70%,
-		#0a4612 100%
-	);
-}
-
-#light .bg-green-gradient {
-	background: radial-gradient(
-		circle at top center,
-		#e7ede6 0%,
-		#b0b9ae 10%,
-		#4c504c 50%,
-		#303430 70%,
-		#222523 100%
-	);
-}
-
 #subHeader {
 	transition: top 0.35s ease-in;
 }
 
 #subHeader.hiddenbox {
 	top: -80px;
+}
+
+/* Color */
+/* #052210 dark green */
+/* #101010 #141414 dark black*/
+/* #2F373B light shadow*/
+/* #04FFBC #40FD0B to mix color sky-green*/
+
+.heading-color {
+	background: linear-gradient(to right, #04ffbc, #40fd0b);
+	display: inline-block;
+	color: transparent;
+	background-clip: text;
 }
 
 /* -------------------------------- */

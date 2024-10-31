@@ -14,12 +14,11 @@ const Home = React.lazy(() => {
 const About = React.lazy(() => import("./pages/About"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const Project = React.lazy(() => import("./pages/Project"));
-// import Loading from "./components/Loading";
+import PageNotFound from "./pages/PageNotFound";
 import Links from "./components/Links";
 import Footer from "./components/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollTop from "./components/ScrollTop";
-import PageNotFound from "./pages/PageNotFound";
 import Loading from "./components/Loading";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,23 +48,25 @@ function App() {
 	}, []);
 
 	// Theme changes --------------------------------
-	const [theme, setTheme] = useState("dark");
-	const handleTheme = () => {
-		if (theme === "dark") {
-			setTheme("light");
-		} else {
-			setTheme("dark");
+	const [darkMode, setDarkMode] = useState(false);
+	useEffect(() => {
+		let savedMode = localStorage.getItem("displayMode");
+		if (!savedMode) {
+			savedMode = "dark";
+			setDarkMode(true);
+			localStorage.setItem("displayMode", savedMode);
 		}
-	};
+		setDarkMode(savedMode === "dark" ? true : false);
+	}, []);
 	return (
 		<BrowserRouter>
 			<div
-				id={theme}
+				className={`${darkMode ? "dark" : ""}`}
 				// data-scroll-container
 				// className="sticky scrollPage"
 				// ref={scrollBox}
 			>
-				<div className="containerBox relative">
+				<div className="relative">
 					<div
 						// data-scroll
 						// data-scroll-sticky
@@ -76,7 +77,7 @@ function App() {
 						{headerShow && <Header setHeaderShow={setHeaderShow} />}
 					</div>
 					<div className="h-14 sm:h-16 md:h-20 dark-green w-full"></div>
-					<div className="app-layout-content w-full min-h-[90vh] light-green overflow-hidden">
+					<div className="app-layout-content w-full min-h-[90vh]  overflow-hidden">
 						<Suspense fallback={<Loading />}>
 							<Routes>
 								<Route path="/" element={<Home />} />
@@ -89,7 +90,10 @@ function App() {
 					</div>
 					<div className={headerShow ? "hidden" : "block"}>
 						<div className="fixed bottom-0 z-30 w-full">
-							<Links theme={theme} handleTheme={handleTheme} />
+							<Links
+								darkMode={darkMode}
+								setDarkMode={setDarkMode}
+							/>
 						</div>
 					</div>
 					<Footer />

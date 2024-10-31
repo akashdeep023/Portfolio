@@ -2,7 +2,19 @@
 export default {
 	content: ["./index.html", "./src/**/*.{js,jsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				customeDark: {
+					500: "#141414",
+					600: "#101010",
+				},
+				customeGreen: {
+					500: "#04ffbc",
+					600: "#40fd0b",
+				},
+			},
+		},
 	},
+	darkMode: "class",
 	plugins: [],
 };

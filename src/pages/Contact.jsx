@@ -18,7 +18,7 @@ function Contact() {
 							We will get back to you as soon as possible.
 						</p>
 						<Link to={"/"}>
-							<button className="mt-2 py-2 sm:py-3 px-4 sm:px-6  rounded-xl border outline-1 btn-style  outline-green-800 text-black/80">
+							<button className="mt-2 py-2 sm:py-3 px-4 sm:px-6  rounded-xl border outline-1   outline-green-800 text-black/80">
 								Home
 							</button>
 						</Link>
@@ -89,7 +89,7 @@ function Contact() {
 					<button
 						type="submit"
 						disabled={state.submitting}
-						className="mt-2 p-2 sm:p-3 rounded-sm border-none outline-1 btn-style  outline-green-800 text-black/80"
+						className="mt-2 p-2 sm:p-3 rounded-sm border-none outline-1   outline-green-800 text-black/80"
 					>
 						{state.submitting ? "Loading..." : "Submit"}
 					</button>
