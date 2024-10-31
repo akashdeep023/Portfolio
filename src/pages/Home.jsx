@@ -1,12 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-import JackImg from "../assets/Layer 1 copy-black-white.png";
+import JackImg from "../assets/img-1.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 	useGSAP(() => {
+		const lEase = gsap.parseEase("linear");
 		gsap.from(".home1-scroll > div > h1", {
 			duration: 1,
 			opacity: 0,
@@ -21,9 +22,9 @@ const Home = () => {
 			animation: "easeOutQuad",
 		});
 		gsap.to("#text-scroll span", {
-			x: "-100%",
+			x: "-80%",
 			duration: 65,
-			ease: "none",
+			ease: lEase,
 			repeat: -1,
 		});
 		gsap.to("#home1 .home1-scroll", {
@@ -71,9 +72,18 @@ const Home = () => {
 				scrub: 5,
 			},
 		});
+		gsap.to("#load-img", {
+			duration: 5,
+			rotate: 360,
+			repeat: -1,
+			ease: lEase,
+		});
 	});
 	return (
-		<div id="home" className="h-full w-full">
+		<div
+			id="home"
+			className="text-black bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 h-full w-full"
+		>
 			<div id="home1" className=" min-h-dvl pt-4 sm:pt-16">
 				<div className="home1-scroll flex flex-col md:flex-row justify-evenly items-center w-full min-h-fit gap-7 ">
 					<div className="font-bold p-3 ">
@@ -95,90 +105,94 @@ const Home = () => {
 					</div>
 					<div
 						id="logo-box"
-						className="min-w-72 sm:min-w-80 md:min-w-96 size-72 sm:size-80 md:size-96 object-contain flex items-end relative "
+						className="min-w-72 rounded-full overflow-hidden border-t-2 border-l-2 border-r-2 border-black  dark:border-white  sm:min-w-80 md:min-w-96 size-72 sm:size-80 md:size-96 object-contain flex items-end relative "
 					>
+						<div
+							id="load-img"
+							className="size-64 sm:size-72 md:size-80 border-2 border-y-transparent dark:border-x-white border-x-black rounded-full flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+						></div>
 						<img
 							src={JackImg}
 							alt="Jack"
-							className=" size-72 sm:size-80 md:size-96 absolute object-cover rounded-b-2xl"
+							className=" size-72 sm:size-80 md:size-96 absolute object-cover object-top"
 						/>
 						<div
 							id="img-box"
 							className="flex flex-wrap absolute h-full w-full top-0 left-0 overflow-hidden"
 						>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
-							<div className=" border h-10 sm:min-h-14 md:h-16 min-w-10 sm:min-w-14 md:min-w-16 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
+							<div className="bg-customeDark-600 border h-8 sm:min-h-10 md:h-12 min-w-8 sm:min-w-10 md:min-w-12 flex-grow"></div>
 						</div>
 					</div>
 				</div>
@@ -234,7 +248,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div id="home3" className="w-full h-dvh "></div>
+			{/* <div id="home3" className="w-full h-dvh "></div> */}
 		</div>
 	);
 };

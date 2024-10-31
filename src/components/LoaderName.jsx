@@ -4,23 +4,23 @@ import { gsap } from "gsap";
 
 const LoaderName = () => {
 	useGSAP(() => {
-		const tl = gsap.timeline({ repeat: -1, defaults: { duration: 1 } });
+		const tl = gsap.timeline({ repeat: -1 });
 		tl.to("#load-name-big span", {
-			duration: 0.5,
-			stagger: 0.06,
-			color: "#052210",
+			duration: 0.8,
+			stagger: 0.05,
+			color: "#40fd0b",
 			animation: "easeOutQuad",
 		});
 		tl.to("#load-name-big span", {
-			duration: 1,
-			stagger: 0.06,
+			duration: 0.8,
+			stagger: 0.05,
 			color: "white",
 			animation: "easeOutQuad",
 		});
 
 		const lEase = gsap.parseEase("linear");
 		gsap.to("#load-box", {
-			duration: 5,
+			duration: 4,
 			rotate: 360,
 			repeat: -1,
 			ease: lEase,
@@ -37,7 +37,10 @@ const LoaderName = () => {
 					className="size-16 sm:size-24 border border-l-transparent rounded-full flex items-center justify-center"
 				></div>
 			</div>
-			<h1 id="load-name-big" className="text-base sm:text-xl absolute">
+			<h1
+				id="load-name-big"
+				className="text-base sm:text-xl absolute text-white"
+			>
 				<span>A</span>
 				<span>k</span>
 				<span>a</span>

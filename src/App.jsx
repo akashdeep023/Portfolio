@@ -66,7 +66,7 @@ function App() {
 				// className="sticky scrollPage"
 				// ref={scrollBox}
 			>
-				<div className="relative">
+				<div className="relative bg-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600">
 					<div
 						// data-scroll
 						// data-scroll-sticky

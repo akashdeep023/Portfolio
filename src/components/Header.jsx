@@ -171,7 +171,7 @@ const Header = ({ setHeaderShow }) => {
 	};
 	return (
 		<div ref={header} id="header" className="fixed w-full h-[90vh] top-0">
-			<div className="bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
+			<div className="bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 border-b dark:border-white border-black text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
 				<div className="font-semibold text-sm sm:text-base">
 					Full Stack Developer | MERN Stack Specialist | Java | C++ |
 					DSA
@@ -189,7 +189,7 @@ const Header = ({ setHeaderShow }) => {
 					Structures & Algorithms for optimized solutions.
 				</div>
 			</div>
-			<div className="bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 -text text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
+			<div className="bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
 				<Link
 					to={"#menu"}
 					onClick={closeHeader}

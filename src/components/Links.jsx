@@ -10,7 +10,7 @@ import { GoMail } from "react-icons/go";
 
 const Links = ({ darkMode, setDarkMode }) => {
 	return (
-		<div className="flex items-center justify-center w-full ">
+		<div className="dark:text-white flex items-center justify-center w-full ">
 			<div className="flex items-center justify-center gap-6 sm:gap-10 backdrop-blur-md px-6 sm:px-10 py-3 sm:py-4 rounded-t-3xl border-t-2">
 				<a
 					href="https://www.linkedin.com/in/akashdeep023/"

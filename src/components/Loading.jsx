@@ -4,16 +4,16 @@ import { gsap } from "gsap";
 
 const Loading = () => {
 	useGSAP(() => {
-		const tl = gsap.timeline({ repeat: -1, defaults: { duration: 1 } });
+		const tl = gsap.timeline({ repeat: -1 });
 		tl.to("#load-name-big span", {
 			duration: 0.5,
-			stagger: 0.06,
-			color: "#052210",
+			stagger: 0.05,
+			color: "#40fd0b",
 			animation: "easeOutQuad",
 		});
 		tl.to("#load-name-big span", {
 			duration: 0.5,
-			stagger: 0.06,
+			stagger: 0.05,
 			color: "white",
 			animation: "easeOutQuad",
 		});
@@ -33,7 +33,7 @@ const Loading = () => {
 		});
 	});
 	return (
-		<div className="w-full h-[calc(100vh-60px)]  flex justify-center items-center relative z-40 overflow-hidden">
+		<div className="w-full h-[calc(100vh-60px)] bg-gradient-to-l to-customeDark-500 from-customeDark-600 text-white flex justify-center items-center relative z-40 overflow-hidden">
 			<div className="flex justify-center items-center relative z-50 -translate-y-12">
 				<div
 					id="load-box"

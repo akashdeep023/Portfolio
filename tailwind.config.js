@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				customeDark: {
-					500: "#141414",
+					500: "#2F373B",
 					600: "#101010",
 				},
 				customeGreen: {
