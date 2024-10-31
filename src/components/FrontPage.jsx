@@ -33,8 +33,8 @@ const FrontPage = () => {
 		});
 	});
 	return (
-		<div className="w-full h-screen dark-green flex justify-center items-center relative z-40 overflow-hidden">
-			<div className="flex justify-center items-center relative z-50">
+		<div className="w-full h-[calc(100vh-60px)] dark-green flex justify-center items-center relative z-40 overflow-hidden">
+			<div className="flex justify-center items-center relative z-50 -translate-y-12">
 				<div
 					id="load-box"
 					className="size-56 sm:size-64 border border-r-transparent rounded-full flex items-center justify-center"
