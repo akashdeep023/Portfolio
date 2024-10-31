@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import React from "react";
 import { gsap } from "gsap";
 
-const FrontPage = () => {
+const Loading = () => {
 	useGSAP(() => {
 		const tl = gsap.timeline({ repeat: -1, defaults: { duration: 1 } });
 		tl.to("#load-name-big span", {
@@ -384,4 +384,4 @@ const FrontPage = () => {
 	);
 };
 
-export default FrontPage;
+export default Loading;

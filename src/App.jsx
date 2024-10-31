@@ -7,19 +7,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 const Home = React.lazy(() => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
-			resolve(import("./components/Home"));
+			resolve(import("./pages/Home"));
 		}, 2500);
 	});
 });
-const About = React.lazy(() => import("./components/About"));
-const Contact = React.lazy(() => import("./components/Contact"));
-const Project = React.lazy(() => import("./components/Project"));
-import FrontPage from "./components/FrontPage";
+const About = React.lazy(() => import("./pages/About"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const Project = React.lazy(() => import("./pages/Project"));
+// import Loading from "./components/Loading";
 import Links from "./components/Links";
 import Footer from "./components/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollTop from "./components/ScrollTop";
-import PageNotFound from "./components/PageNotFound";
+import PageNotFound from "./pages/PageNotFound";
+import Loading from "./components/Loading";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -76,7 +77,7 @@ function App() {
 					</div>
 					<div className="h-14 sm:h-16 md:h-20 dark-green w-full"></div>
 					<div className="app-layout-content w-full min-h-[90vh] light-green overflow-hidden">
-						<Suspense fallback={<FrontPage />}>
+						<Suspense fallback={<Loading />}>
 							<Routes>
 								<Route path="/" element={<Home />} />
 								<Route path="/about" element={<About />} />

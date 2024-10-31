@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
 import { Link } from "react-router-dom";
 
 function Contact() {
