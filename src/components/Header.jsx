@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Link, useLocation } from "react-router-dom";
-import { handleScrollTop } from "../utils";
+import { handleScrollTop } from "../utils/utils";
 
 export const SubHeader = ({ setHeaderShow }) => {
 	const subHeader = useRef();

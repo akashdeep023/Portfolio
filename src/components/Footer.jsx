@@ -24,7 +24,7 @@ const Footer = () => {
 
 							<li>
 								<a
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									href="mailto:contact.akashdeep023@gmail.com"
 									target="_blank"
 									rel="noreferrer"
@@ -56,7 +56,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									to={"/"}
 								>
 									Home
@@ -64,7 +64,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									to={"/about"}
 								>
 									About
@@ -72,7 +72,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									to={"/project"}
 								>
 									Project
@@ -80,7 +80,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									to={"/contact"}
 								>
 									Contact
@@ -95,7 +95,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									href="https://www.linkedin.com/in/akashdeep023/"
 									target="_blank"
 									rel="noreferrer"
@@ -105,7 +105,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									href="https://github.com/akashdeep023/"
 									target="_blank"
 									rel="noreferrer"
@@ -115,7 +115,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									href="https://instagram.com/akashdeep023_/"
 									target="_blank"
 									rel="noreferrer"
@@ -125,7 +125,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<a
-									className="hover:text-green-700 hover:underline"
+									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 									href="mailto:contact.akashdeep023@gmail.com"
 									target="_blank"
 									rel="noreferrer"

@@ -1,5 +1,5 @@
 import React from "react";
-import { handleScrollTop } from "../utils";
+import { handleScrollTop } from "../utils/utils";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
 const ScrollTop = ({ scrollShow }) => {
@@ -9,7 +9,11 @@ const ScrollTop = ({ scrollShow }) => {
 				scrollShow ? "bottom-full opacity-0" : "bottom-3 opacity-100"
 			} right-0 sm:right-1 z-40 transition-all duration-700 animate-bounce cursor-pointer`}
 		>
-			<FaArrowAltCircleUp fontSize={"40px"} onClick={handleScrollTop} />
+			<FaArrowAltCircleUp
+				fontSize={"40px"}
+				onClick={handleScrollTop}
+				className="text-customeDark-500"
+			/>
 		</div>
 	);
 };
