@@ -210,39 +210,39 @@ const Home = () => {
 			</div>
 			<div id="home2" className="w-full h-dvh ">
 				<div className="home2-fam w-full h-fit flex flex-wrap justify-evenly p-3 sm:p-5 md:p-10">
-					<div className="h-32 sm:h-44 md:h-52 lg:h-60 w-32 sm:w-44 md:w-52 lg:w-60 m-1 shadow-md shadow-white border-2 rounded-2xl  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>20</b>
 							<span>+</span>
 						</div>
-						<h1 className="text-base sm:text-lg md:text-xl">
-							Project Completed
+						<h1 className="uppercase text-base sm:text-lg md:text-xl">
+							Successfully completed project
 						</h1>
 					</div>
-					<div className="h-32 sm:h-44 md:h-52 lg:h-60 w-32 sm:w-44 md:w-52 lg:w-60 m-1 shadow-md shadow-white border-2 rounded-2xl  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-							<b>1</b>
-							<span>K+</span>
+							<b>15</b>
+							<span>+</span>
 						</div>
-						<h1 className="text-base sm:text-lg md:text-xl">
-							Solving Errors
+						<h1 className="uppercase text-base sm:text-lg md:text-xl">
+							Technologies
 						</h1>
 					</div>
-					<div className="h-32 sm:h-44 md:h-52 lg:h-60 w-32 sm:w-44 md:w-52 lg:w-60 m-1 shadow-md shadow-white border-2 rounded-2xl  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-							<b>1.7</b>
+							<b>2.0</b>
 							<span>K+</span>
 						</div>
-						<h1 className="text-base sm:text-lg md:text-xl">
+						<h1 className="uppercase text-base sm:text-lg md:text-xl">
 							LinkedIn Family
 						</h1>
 					</div>
-					<div className="h-32 sm:h-44 md:h-52 lg:h-60 w-32 sm:w-44 md:w-52 lg:w-60 m-1 shadow-md shadow-white border-2 rounded-2xl  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-							<b>1</b>
+							<b>1.0</b>
 							<span>+</span>
 						</div>
-						<h1 className="text-base sm:text-lg md:text-xl">
+						<h1 className="uppercase text-base sm:text-lg md:text-xl">
 							Year of Experience
 						</h1>
 					</div>
