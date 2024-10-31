@@ -1,17 +1,16 @@
 import React from "react";
 import { handleScrollTop } from "../utils";
 import { FaArrowAltCircleUp } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-const ScrollTop = () => {
+const ScrollTop = ({ scrollShow }) => {
 	return (
-		<Link
-			dataname="ScrollTop"
-			to={"#top"}
-			className="absolute right-3 sm:right-6 bottom-16 sm:bottom-5 cursor-pointer"
+		<div
+			className={`h-16 w-16 fixed flex items-center justify-center ${
+				scrollShow ? "bottom-full opacity-0" : "bottom-3 opacity-100"
+			} right-0 sm:right-1 z-40 transition-all duration-700 animate-bounce cursor-pointer`}
 		>
 			<FaArrowAltCircleUp fontSize={"40px"} onClick={handleScrollTop} />
-		</Link>
+		</div>
 	);
 };
 

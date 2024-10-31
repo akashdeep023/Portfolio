@@ -1,6 +1,6 @@
 import React from "react";
 import {
-	FaGithubAlt,
+	FaGithub,
 	FaInstagram,
 	FaLinkedinIn,
 	FaMoon,
@@ -29,7 +29,7 @@ const Links = ({ theme, handleTheme }) => {
 					rel="noreferrer"
 					className="border-b-2 border-white/50 p-1"
 				>
-					<FaGithubAlt fontSize={"25px"} />
+					<FaGithub fontSize={"25px"} />
 				</a>
 				<a
 					dataname="Instagram"

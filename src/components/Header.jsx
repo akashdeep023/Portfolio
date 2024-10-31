@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { handleScrollTop } from "../utils";
 
 export const SubHeader = ({ setHeaderShow }) => {
 	const subHeader = useRef();
+	const { pathname } = useLocation();
+
 	useGSAP(
 		() => {
 			gsap.from("#name span", {
@@ -39,6 +42,11 @@ export const SubHeader = ({ setHeaderShow }) => {
 			prevScrollPos = currentScrollPos;
 		});
 	}, []);
+
+	// Scroll to top of page --------------------------------
+	useEffect(() => {
+		handleScrollTop();
+	}, [pathname]);
 
 	return (
 		<div
@@ -158,32 +166,6 @@ const Header = ({ setHeaderShow }) => {
 	const hoverOutHeader = (e) => {
 		hoverOutHeaderAnimation(e);
 	};
-	// Cursor Zoom -----------------------------
-	useEffect(() => {
-		const handleMouseEnter = (dataName) => {
-			document.getElementById("cursor").classList.add("hover");
-			document.getElementById("cursor").innerHTML = dataName || "Click";
-		};
-		const handleMouseLeave = () => {
-			document.getElementById("cursor").classList.remove("hover");
-			document.getElementById("cursor").innerHTML = "";
-		};
-		const links = document.querySelectorAll("a");
-		links.forEach((link) => {
-			const dataName = link.getAttribute("dataname");
-			link.addEventListener("mouseenter", () =>
-				handleMouseEnter(dataName)
-			);
-			link.addEventListener("mouseleave", handleMouseLeave);
-		});
-
-		return () => {
-			links.forEach((link) => {
-				link.removeEventListener("mouseenter", handleMouseEnter);
-				link.removeEventListener("mouseleave", handleMouseLeave);
-			});
-		};
-	}, []);
 	return (
 		<div ref={header} id="header" className="fixed w-full h-[90vh] top-0">
 			<div className="dark-green text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
