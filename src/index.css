@@ -74,12 +74,6 @@ span {
 	top: -80px;
 }
 
-/* Color */
-/* #052210 dark green */
-/* #101010 #141414 dark black*/
-/* #2F373B light shadow*/
-/* #04FFBC #40FD0B to mix color sky-green*/
-
 .heading-color {
 	background: linear-gradient(to right, #04ffbc, #40fd0b);
 	display: inline-block;
@@ -88,7 +82,12 @@ span {
 }
 
 /* -------------------------------- */
-/* #com-img {
-    background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: cover;
-} */
+.no-spinner {
+	-moz-appearance: textfield; /* Firefox */
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+	-webkit-appearance: none; /* Chrome, Safari, Edge */
+	margin: 0;
+}
