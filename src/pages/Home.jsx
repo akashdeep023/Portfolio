@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import JackImg from "../assets/img-1.png";
+import resume from "../assets/AKASHDEEP-RESUME.pdf";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,8 +83,16 @@ const Home = () => {
 	return (
 		<div
 			id="home"
-			className="text-black bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 h-full w-full"
+			className="relative text-black bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 h-full w-full"
 		>
+			<a
+				target="_blank"
+				download={resume}
+				href={resume}
+				className="bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 text-black h-14 w-fit fixed left-4 origin-left rotate-90 bottom-56 z-40 py-2 px-4 rounded-lg flex items-center justify-cente text-sm sm:text-base"
+			>
+				Download Resume
+			</a>
 			<div id="home1" className=" min-h-dvl pt-4 sm:pt-16">
 				<div className="home1-scroll flex flex-col md:flex-row justify-evenly items-center w-full min-h-fit gap-7 ">
 					<div className="font-bold p-3 ">
@@ -208,9 +217,9 @@ const Home = () => {
 					</span>
 				</div>
 			</div>
-			<div id="home2" className="w-full h-dvh ">
+			<div id="home2" className="w-full min-h-dvh ">
 				<div className="home2-fam w-full h-fit flex flex-wrap justify-evenly p-3 sm:p-5 md:p-10">
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>20</b>
 							<span>+</span>
@@ -219,7 +228,7 @@ const Home = () => {
 							Successfully completed project
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>15</b>
 							<span>+</span>
@@ -228,7 +237,7 @@ const Home = () => {
 							Technologies
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>2.0</b>
 							<span>K+</span>
@@ -237,7 +246,7 @@ const Home = () => {
 							LinkedIn Family
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>1.0</b>
 							<span>+</span>
