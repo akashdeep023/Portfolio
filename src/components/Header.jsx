@@ -54,7 +54,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			id="subHeader"
 			className="flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 dark-green"
 		>
-			<a dataname="Jack" href="/">
+			<a href="/">
 				<div id="name" className="text-2xl p-2">
 					<span>A</span>
 					<span>k</span>
@@ -211,7 +211,7 @@ const Header = ({ setHeaderShow }) => {
 					id="nav-link"
 					className="flex flex-col gap-4 items-start font-bold"
 				>
-					<Link dataname="Home" to={"/"}>
+					<Link to={"/"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
@@ -224,7 +224,7 @@ const Header = ({ setHeaderShow }) => {
 							<span className="home-text">e</span>
 						</p>
 					</Link>
-					<Link dataname="About" to={"/about"}>
+					<Link to={"/about"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
@@ -238,7 +238,7 @@ const Header = ({ setHeaderShow }) => {
 							<span className="about-text">t</span>
 						</p>
 					</Link>
-					<Link dataname="Project" to={"/project"}>
+					<Link to={"/project"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
@@ -254,7 +254,7 @@ const Header = ({ setHeaderShow }) => {
 							<span className="project-text">t</span>
 						</p>
 					</Link>
-					<Link dataname="Contact" to={"/contact"}>
+					<Link to={"/contact"}>
 						<p
 							className="cursor-pointer"
 							onMouseLeave={(e) => hoverOutHeader(e.target)}
