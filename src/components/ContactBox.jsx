@@ -75,7 +75,7 @@ const ContactBox = () => {
 				<h3 className="font-bold text-xl uppercase md:text-2xl">
 					Get in Touch
 				</h3>
-				<p className="mb-2">
+				<p className="mb-2 opacity-60">
 					We'd love to hear from you - whether it's a question,
 					feedback, or just to say hello, feel free to reach out!
 				</p>

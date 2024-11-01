@@ -189,7 +189,7 @@ const Header = ({ setHeaderShow }) => {
 					Structures & Algorithms for optimized solutions.
 				</div>
 			</div>
-			<div className="bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
+			<div className="text-black bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 text-5xl sm:text-6xl md:text-7xl flex justify-evenly gap-y-5 sm:justify-between flex-col sm:flex-row items-center h-[71vh] sm:h-[75vh] md:h-[77vh] min-h-fit w-full absolute top-0 p-5 z-50">
 				<Link
 					to={"#menu"}
 					onClick={closeHeader}
