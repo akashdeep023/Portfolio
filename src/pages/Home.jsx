@@ -218,7 +218,7 @@ const Home = () => {
 			</div>
 			<div id="home2" className="w-full min-h-dvh ">
 				<div className="home2-fam w-full h-fit flex flex-wrap justify-evenly p-3 sm:p-5 md:p-10">
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>22</b>
 							<span>+</span>
@@ -227,7 +227,7 @@ const Home = () => {
 							Successfully completed project
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>15</b>
 							<span>+</span>
@@ -236,7 +236,7 @@ const Home = () => {
 							Technologies
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>2.2</b>
 							<span>K+</span>
@@ -245,7 +245,7 @@ const Home = () => {
 							LinkedIn Family
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>1.0</b>
 							<span>+</span>
