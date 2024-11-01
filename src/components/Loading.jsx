@@ -33,7 +33,7 @@ const Loading = () => {
 		});
 	});
 	return (
-		<div className="w-full h-[calc(100vh-60px)] bg-gradient-to-r to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 text-white flex justify-center items-center relative z-40 overflow-hidden">
+		<div className="w-full h-[calc(100vh-60px)] bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 text-white flex justify-center items-center relative z-40 overflow-hidden">
 			<div className="flex justify-center items-center relative z-50 -translate-y-12">
 				<div
 					id="load-box"
