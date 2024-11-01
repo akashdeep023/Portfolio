@@ -217,7 +217,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div id="home2" className="w-full">
-				<div className="home2-fam w-full h-fit flex flex-wrap justify-evenly p-3 sm:p-5 md:p-10">
+				<div className="home2-fam w-full h-fit flex flex-wrap justify-evenly py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12">
 					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>22</b>
@@ -256,7 +256,6 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			{/* <div id="home3" className="w-full h-dvh "></div> */}
 			<div className="py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12">
 				<Heading text={"Contact Us"} />
 				<ContactBox />
