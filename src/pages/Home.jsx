@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import JackImg from "../assets/img-1.png";
 import resume from "../assets/AKASHDEEP-RESUME.pdf";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ContactBox from "../components/ContactBox";
+import Heading from "../components/Heading";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -81,15 +83,12 @@ const Home = () => {
 		});
 	});
 	return (
-		<div
-			id="home"
-			className="relative text-black bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 h-full w-full"
-		>
+		<div id="home" className="relative h-full w-full">
 			<a
 				target="_blank"
 				download={resume}
 				href={resume}
-				className="bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 text-black h-14 w-fit fixed left-4 origin-left rotate-90 bottom-56 z-40 py-2 px-4 rounded-lg flex items-center justify-cente text-sm sm:text-base"
+				className="bg-gradient-to-l hover:bg-gradient-to-r to-customeGreen-500 from-customeGreen-600 text-black h-10 w-fit fixed left-4 origin-left rotate-90 bottom-56 z-40 py-2 px-4 rounded-lg flex items-center justify-cente text-sm sm:text-base"
 			>
 				Download Resume
 			</a>
@@ -219,16 +218,16 @@ const Home = () => {
 			</div>
 			<div id="home2" className="w-full min-h-dvh ">
 				<div className="home2-fam w-full h-fit flex flex-wrap justify-evenly p-3 sm:p-5 md:p-10">
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-							<b>20</b>
+							<b>22</b>
 							<span>+</span>
 						</div>
 						<h1 className="uppercase text-base sm:text-lg md:text-xl">
 							Successfully completed project
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>15</b>
 							<span>+</span>
@@ -237,16 +236,16 @@ const Home = () => {
 							Technologies
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-							<b>2.0</b>
+							<b>2.2</b>
 							<span>K+</span>
 						</div>
 						<h1 className="uppercase text-base sm:text-lg md:text-xl">
 							LinkedIn Family
 						</h1>
 					</div>
-					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 dark:bg-gradient-to-t rounded-md to-customeDark-500 from-customeDark-600  flex items-center text-center justify-center flex-col">
+					<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  border-2 dark:border-white/30 shadow-md shadow-black/50 bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
 						<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							<b>1.0</b>
 							<span>+</span>
@@ -258,6 +257,10 @@ const Home = () => {
 				</div>
 			</div>
 			{/* <div id="home3" className="w-full h-dvh "></div> */}
+			<div className="py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12">
+				<Heading text={"Contact Us"} />
+				<ContactBox />
+			</div>
 		</div>
 	);
 };

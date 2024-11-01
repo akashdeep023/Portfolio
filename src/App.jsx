@@ -66,7 +66,7 @@ function App() {
 				// className="sticky scrollPage"
 				// ref={scrollBox}
 			>
-				<div className="relative bg-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600">
+				<div className="relative text-black dark:text-white bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600">
 					<div
 						// data-scroll
 						// data-scroll-sticky
@@ -76,7 +76,7 @@ function App() {
 						<SubHeader setHeaderShow={setHeaderShow} />
 						{headerShow && <Header setHeaderShow={setHeaderShow} />}
 					</div>
-					<div className="h-14 sm:h-16 md:h-20 dark-green w-full"></div>
+					<div className="h-14 sm:h-16 md:h-20 w-full"></div>
 					<div className="app-layout-content w-full min-h-[90vh]  overflow-hidden">
 						<Suspense fallback={<Loading />}>
 							<Routes>

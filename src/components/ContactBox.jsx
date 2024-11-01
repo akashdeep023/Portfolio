@@ -118,14 +118,14 @@ const ContactBox = () => {
 			</div>
 			<form
 				onSubmit={handleSubmitForm}
-				className="flex gap-4 flex-col w-full md:w-3/5 shadow-2xl p-4 md:p-6 bg-white dark:bg-gradient-to-r to-customeDark-600 from-customeDark-700/60 rounded-xl transition-all"
+				className="flex gap-4 flex-col w-full md:w-3/5 shadow-2xl p-4 md:p-6 bg-gradient-to-r to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 rounded-xl transition-all"
 			>
 				<div className="flex gap-2 w-full">
 					<input
 						name="name"
 						type="text"
 						placeholder="Name"
-						className="rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner focus:bg-customeDark-500/60 focus:shadow-black/60 outline-none w-full"
+						className="rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner dark:focus:bg-customeDark-500/60 focus:bg-customeLight-500/60 focus:shadow-black/60 outline-none w-full"
 						value={name}
 						onChange={(e) => handleName(e.target.value)}
 					/>
@@ -134,7 +134,7 @@ const ContactBox = () => {
 						name="mobile"
 						type="number"
 						placeholder="Mobile"
-						className="no-spinner rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner focus:bg-customeDark-500/60 focus:shadow-black/60 outline-none w-full"
+						className="no-spinner rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner dark:focus:bg-customeDark-500/60 focus:bg-customeLight-500/60 focus:shadow-black/60 outline-none w-full"
 					/>
 				</div>
 				<input
@@ -142,14 +142,14 @@ const ContactBox = () => {
 					name="email"
 					type="email"
 					placeholder="Email"
-					className="rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner focus:bg-customeDark-500/60 focus:shadow-black/60 outline-none w-full"
+					className="rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner dark:focus:bg-customeDark-500/60 focus:bg-customeLight-500/60 focus:shadow-black/60 outline-none w-full"
 				/>
 				<textarea
 					ref={message}
 					name="message"
 					placeholder="Message"
 					rows="4"
-					className="rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner focus:bg-customeDark-500/60 focus:shadow-black/60 outline-none w-full"
+					className="rounded-lg bg-transparent py-2.5 px-3 shadow-md shadow-black/20 border border-white/40 focus:shadow-inner dark:focus:bg-customeDark-500/60 focus:bg-customeLight-500/60 focus:shadow-black/60 outline-none w-full"
 				></textarea>
 				{errorMsg && (
 					<div className="text-red-500 text-sm text-center">
@@ -164,7 +164,7 @@ const ContactBox = () => {
 				</button>
 			</form>
 			{success && (
-				<div className="text-black border-black/20 border flex flex-col gap-1 justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12 bg-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 dark:border-white dark:text-white rounded-lg w-10/12 sm:w-8/12 md:w-fit">
+				<div className="text-black border-black/20 border flex flex-col gap-1 justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12 bg-gradient-to-r to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 dark:border-white dark:text-white rounded-lg w-10/12 sm:w-8/12 md:w-fit">
 					<h2 className="font-bold text-2xl text-center">
 						{successMsg
 							? "Form submitted successfully!"

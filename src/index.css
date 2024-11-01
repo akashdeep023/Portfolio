@@ -91,3 +91,8 @@ span {
 	-webkit-appearance: none; /* Chrome, Safari, Edge */
 	margin: 0;
 }
+
+.e {
+	background-color: #d1d6ff;
+	color: #c9fdff;
+}

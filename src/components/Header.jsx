@@ -52,7 +52,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 		<div
 			ref={subHeader}
 			id="subHeader"
-			className="bg-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 "
+			className="bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 "
 		>
 			<a href="/">
 				<div
@@ -171,7 +171,7 @@ const Header = ({ setHeaderShow }) => {
 	};
 	return (
 		<div ref={header} id="header" className="fixed w-full h-[90vh] top-0">
-			<div className="bg-white dark:text-white dark:bg-gradient-to-l to-customeDark-500 from-customeDark-600 border-b dark:border-white border-black text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
+			<div className="bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 border-b dark:border-white border-black text-center flex flex-col justify-end items-center h-[90vh] min-h-fit w-full fixed top-0 p-3 z-50">
 				<div className="font-semibold text-sm sm:text-base">
 					Full Stack Developer | MERN Stack Specialist | Java | C++ |
 					DSA
