@@ -12,7 +12,7 @@ const ProjectBox = ({ project }) => {
 			<div className="h-20 w-20 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 			<div className="w-full z-10">
 				<img
-					src={"../../public/projects/" + project.image}
+					src={"../public/projects/" + project.image}
 					alt={project.name}
 					className="h-full w-full"
 				/>
