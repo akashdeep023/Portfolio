@@ -21,7 +21,7 @@ const Home = () => {
 		gsap.to("#img-box > div", {
 			duration: 1,
 			opacity: 0,
-			stagger: 0.06,
+			stagger: 0.03,
 			animation: "easeOutQuad",
 		});
 		gsap.to("#text-scroll span", {
