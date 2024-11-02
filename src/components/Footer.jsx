@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
-		<div className="border-t border-white/20 text-white bg-gradient-to-l to-customeDark-500 from-customeDark-600 w-full min-h-fit h-1/2 px-3 sm:px-5 py-8 flex flex-col gap-3 justify-evenly relative z-40 ">
+		<div className="border-t border-white/20 text-white bg-gradient-to-l to-customeDark-500 from-customeDark-600 w-full min-h-fit h-1/2 py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12 flex flex-col gap-3 justify-evenly relative z-40 ">
 			<div className="absolute top-0 right-0 hidden sm:flex size-32 m-3 justify-center items-center overflow-hidden">
 				<LoaderName />
 			</div>
-			<h1 className="font-bold text-2xl whitespace-nowrap mr-3 border-b pb-4 sm:pb-7 mb-4 sm:mb-6 border-white/15">
+			<h1 className="font-bold text-2xl whitespace-nowrap border-b pb-4 sm:pb-5 md:pb-6 mb-4 sm:mb-6 border-white/15">
 				Akash deep | Portfolio
 			</h1>
 			<div className="flex w-full justify-start md:justify-evenly text-xs md:text-sm gap-5 sm:gap-10">
