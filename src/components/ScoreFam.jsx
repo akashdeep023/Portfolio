@@ -16,7 +16,7 @@ const ScoreFam = () => {
 				trigger: ".score-fam",
 				scroller: "body",
 				start: "top 80%",
-				end: "top 20%",
+				end: "top 12%",
 				scrub: 2,
 			},
 		});
@@ -38,7 +38,9 @@ const ScoreFam = () => {
 	});
 	return (
 		<div className="score-fam w-full h-fit flex flex-wrap justify-evenly py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12">
-			<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+			<div className="relative overflow-hidden size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+				<div className="h-12 w-12 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
+				<div className="h-12 w-12 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 					<b>22</b>
 					<span>+</span>
@@ -47,7 +49,9 @@ const ScoreFam = () => {
 					Successfully completed project
 				</h1>
 			</div>
-			<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+			<div className="relative overflow-hidden size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+				<div className="h-12 w-12 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
+				<div className="h-12 w-12 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 					<b>15</b>
 					<span>+</span>
@@ -56,7 +60,9 @@ const ScoreFam = () => {
 					Technologies
 				</h1>
 			</div>
-			<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+			<div className="relative overflow-hidden size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+				<div className="h-12 w-12 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
+				<div className="h-12 w-12 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 					<b>2.2</b>
 					<span>K+</span>
@@ -65,7 +71,9 @@ const ScoreFam = () => {
 					LinkedIn Family
 				</h1>
 			</div>
-			<div className="size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+			<div className="relative overflow-hidden size-36 sm:size-44 md:size-52 lg:size-60 m-2 sm:m-4 p-2  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center flex-col">
+				<div className="h-12 w-12 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
+				<div className="h-12 w-12 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 					<b>1.0</b>
 					<span>+</span>

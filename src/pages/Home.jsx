@@ -1,7 +1,5 @@
 import React from "react";
 import resume from "../assets/AKASHDEEP-RESUME.pdf";
-import ContactBox from "../components/ContactBox";
-import Heading from "../components/Heading";
 import Hero from "../components/Hero";
 import ScoreFam from "../components/ScoreFam";
 import SkillsBar from "../components/SkillsBar";
