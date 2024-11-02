@@ -13,14 +13,14 @@ export const projectDetails = [
 			"https://www.linkedin.com/posts/akashdeep023_chatapp-mernabrstack-mernstack-activity-7222507586980388864-XiV0?utm_source=share&utm_medium=member_desktop",
 		image: "img",
 		description: "Chat Application Using MERN Stack with Tailwind CSS",
-		technoloty: [
+		technology: [
 			"React.js",
 			"Redux",
 			"Socket.IO",
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"Tailwind-CSS",
+			"TailwindCSS",
 			"JavaScript",
 		],
 		project: "Major Project",
@@ -34,7 +34,7 @@ export const projectDetails = [
 		image: "img",
 		description:
 			"A feature-rich full-stack web application inspired by Airbnb.",
-		technoloty: [
+		technology: [
 			"EJS",
 			"Node.js",
 			"MongoDB",
@@ -56,7 +56,7 @@ export const projectDetails = [
 		image: "img",
 		description:
 			"Welcome to Food Plaza, a cutting-edge food delivery app designed to revolutionize your dining experience. Get ready to enjoy seamless food ordering with a user-friendly interface and personalized features.",
-		technoloty: ["React.js", "Redux", "CSS", "JavaScript"],
+		technology: ["React.js", "Redux", "CSS", "JavaScript"],
 		project: "Major Project",
 	},
 	{
@@ -68,10 +68,10 @@ export const projectDetails = [
 		image: "img",
 		description:
 			"Greetings, movie lovers! Welcome to Netflix-GPT, a state-o-the-art movie recommendation website powered by the GPT model and Firebase.",
-		technoloty: [
+		technology: [
 			"React.js",
 			"Redux",
-			"Tailwind-CSS",
+			"TailwindCSS",
 			"JavaScript",
 			"FireBase",
 		],
@@ -84,7 +84,7 @@ export const projectDetails = [
 			"https://www.linkedin.com/posts/akashdeep023_webdevelopment-nodejs-expressjs-activity-7184854679493783553-dFXF?utm_source=share&utm_medium=member_desktop",
 		image: "img",
 		description: "--------------------------------",
-		technoloty: [
+		technology: [
 			"EJS",
 			"Node.js",
 			"Express.js",
@@ -99,12 +99,12 @@ export const projectDetails = [
 		live: "https://code-with.vercel.app/",
 		image: "img",
 		description: "--------------------------------",
-		technoloty: [
+		technology: [
 			"React.js",
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"Tailwind-CSS",
+			"TailwindCSS",
 			"JavaScript",
 		],
 		project: "Client Project",
@@ -114,7 +114,7 @@ export const projectDetails = [
 		live: "https://drioh.vercel.app/",
 		image: "img",
 		description: "--------------------------------",
-		technoloty: ["React.js", "Tailwind-CSS", "JavaScript"],
+		technology: ["React.js", "TailwindCSS", "JavaScript"],
 		project: "Client Project",
 	},
 	{
@@ -122,7 +122,7 @@ export const projectDetails = [
 		live: "https://quablefoods.vercel.app/",
 		image: "img",
 		description: "--------------------------------",
-		technoloty: ["React.js", "Tailwind-CSS", "JavaScript"],
+		technology: ["React.js", "TailwindCSS", "JavaScript"],
 		project: "Client Project",
 	},
 	{
@@ -131,12 +131,12 @@ export const projectDetails = [
 		github: "https://github.com/akashdeep023/Todo_Mern",
 		image: "img",
 		description: "--------------------------------",
-		technoloty: [
+		technology: [
 			"React.js",
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"Tailwind-CSS",
+			"TailwindCSS",
 			"JavaScript",
 		],
 		project: "Mini Major Project",
@@ -147,7 +147,7 @@ export const projectDetails = [
 		github: "https://github.com/akashdeep023/Weather_Widget",
 		image: "img",
 		description: "This is a simple weather app.",
-		technoloty: ["React.js", "Material-UI", "HTML", "CSS", "JavaScript"],
+		technology: ["React.js", "MaterialUI", "HTML", "CSS", "JavaScript"],
 		project: "Mini Major Project",
 	},
 	{
@@ -157,7 +157,7 @@ export const projectDetails = [
 		image: "img",
 		description:
 			"Simon Says is a classic memory game where players must remember and repeat a sequence of colors and sounds. This project is a web-based implementation of the Simon Says Game.",
-		technoloty: ["HTML", "CSS", "JavaScript"],
+		technology: ["HTML", "CSS", "JavaScript"],
 		project: "Mini Major Project",
 	},
 	{
@@ -167,7 +167,7 @@ export const projectDetails = [
 		image: "img",
 		description:
 			"A clone of the Spotify website for practicing web development skills.",
-		technoloty: ["HTML", "CSS", "JavaScript"],
+		technology: ["HTML", "CSS", "JavaScript"],
 		project: "Mini Major Project",
 	},
 	{
@@ -177,7 +177,7 @@ export const projectDetails = [
 		image: "img",
 		description:
 			"A clone of the Spotify website for practicing web development skills.",
-		technoloty: ["HTML", "CSS"],
+		technology: ["HTML", "CSS"],
 		project: "Mini Major Project",
 	},
 ];
