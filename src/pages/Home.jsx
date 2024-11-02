@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-import JackImg from "../assets/img-1.png";
+import JackImg from "../assets/img.png";
 import resume from "../assets/AKASHDEEP-RESUME.pdf";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactBox from "../components/ContactBox";
