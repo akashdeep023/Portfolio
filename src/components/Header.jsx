@@ -54,7 +54,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 			id="subHeader"
 			className="bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 flex justify-between flex-nowrap items-center px-4 sm:px-6 md:px-8 h-14 sm:h-16 md:h-20 fixed w-full top-0 "
 		>
-			<a href="/">
+			<Link to="/">
 				<div
 					id="name"
 					className="text-2xl p-2 text-customeDark-600 dark:text-white"
@@ -70,7 +70,7 @@ export const SubHeader = ({ setHeaderShow }) => {
 					<span>e</span>
 					<span>p</span>
 				</div>
-			</a>
+			</Link>
 			<Link
 				to={"#menu"}
 				id="menu"
