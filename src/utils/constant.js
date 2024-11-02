@@ -187,3 +187,54 @@ export const projectDetails = [
 		project: "Mini Major Project",
 	},
 ];
+
+export const skills = [
+	{
+		name: "Java",
+		percentage: "80%",
+	},
+	{
+		name: "JavaScript",
+		percentage: "90%",
+	},
+	{
+		name: "React.js",
+		percentage: "90%",
+	},
+	{
+		name: "Node.js",
+		percentage: "85%",
+	},
+	{
+		name: "Express.js",
+		percentage: "80%",
+	},
+	{
+		name: "MongoDB",
+		percentage: "80%",
+	},
+	{
+		name: "MySQL",
+		percentage: "75%",
+	},
+	{
+		name: "HTML",
+		percentage: "98%",
+	},
+	{
+		name: "Vanilla CSS",
+		percentage: "95%",
+	},
+	{
+		name: "Bootstrap CSS",
+		percentage: "85%",
+	},
+	{
+		name: "Tailwind CSS",
+		percentage: "92%",
+	},
+	{
+		name: "Git/GitHub",
+		percentage: "85%",
+	},
+];
