@@ -118,7 +118,7 @@ const ContactBox = () => {
 			</div>
 			<form
 				onSubmit={handleSubmitForm}
-				className="flex gap-4 flex-col w-full md:w-3/5 shadow-2xl p-4 md:p-6 bg-gradient-to-r to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 rounded-xl transition-all"
+				className="flex gap-4 flex-col w-full md:w-3/5 p-4 md:p-6 bg-gradient-to-r to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 rounded-3xl border dark:border-white/40 border-black/40 transition-all shadow-md shadow-black/50"
 			>
 				<div className="flex gap-2 w-full">
 					<input

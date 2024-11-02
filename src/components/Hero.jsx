@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
 	useGSAP(() => {
 		const lEase = gsap.parseEase("linear");
-		gsap.from(".home1-scroll > div > h1", {
+		gsap.from(".hero-scroll > div > h1", {
 			duration: 1,
 			opacity: 0,
 			y: 100,
@@ -27,14 +27,14 @@ const Hero = () => {
 			ease: lEase,
 			repeat: -1,
 		});
-		gsap.to("#home1 .home1-scroll", {
+		gsap.to("#hero .hero-scroll", {
 			y: (index) => (index === 0 ? -150 : 0),
 			x: (index) => (index === 1 ? "-50%" : 0),
 			stagger: 0.7,
 			opacity: 0,
 			scale: (index) => (index === 0 ? 0.7 : 1),
 			scrollTrigger: {
-				trigger: "#home1",
+				trigger: "#hero",
 				scroller: "body",
 				start: "top 7.5%",
 				// start: "top 3%",
@@ -50,8 +50,8 @@ const Hero = () => {
 		});
 	});
 	return (
-		<div id="home1" className=" min-h-dvl pt-4 sm:pt-8">
-			<div className="home1-scroll flex flex-col md:flex-row justify-evenly items-center w-full min-h-fit gap-7 py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12">
+		<div id="hero" className=" min-h-dvl pt-4 sm:pt-8">
+			<div className="hero-scroll flex flex-col md:flex-row justify-evenly items-center w-full min-h-fit gap-7 py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12">
 				<div className="font-bold">
 					<h1 className="text-2xl sm:text-3xl">
 						Hello I'm{" "}
@@ -164,7 +164,7 @@ const Hero = () => {
 			</div>
 			<div
 				id="text-scroll"
-				className="home1-scroll w-full flex py-3 px-2 items-end text-[16vw] sm:text-[12vw] md:text-[9vw] font-bold whitespace-nowrap"
+				className="hero-scroll w-full flex py-3 px-2 items-end text-[16vw] sm:text-[12vw] md:text-[9vw] font-bold whitespace-nowrap"
 			>
 				<span>
 					Full Stack Developer | MERN Stack Specialist | Java | C++ |
