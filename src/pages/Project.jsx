@@ -8,19 +8,18 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const Project = () => {
-	const projectBox = useRef();
 	useGSAP(() => {
-		gsap.from("#projectBox div ", {
-			duration: 5,
+		gsap.from("#projectBox div", {
+			duration: 3,
 			opacity: 0,
-			y: 50,
-			stagger: 0.9,
+			y: 80,
+			stagger: 0.8,
 			animation: "easeOutQuad",
 			scrollTrigger: {
 				trigger: "#projectBox",
 				scroller: "body",
-				start: "top 130%",
-				end: "top -150%",
+				start: "top 125%",
+				end: "bottom 125%",
 				scrub: 3,
 			},
 		});
@@ -29,7 +28,6 @@ const Project = () => {
 		<div className="w-full min-full mb-4 sm:mb-8">
 			<Heading text={"Project"} />
 			<div
-				ref={projectBox}
 				id="projectBox"
 				className="grid grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12"
 			>
