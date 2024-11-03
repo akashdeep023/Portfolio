@@ -66,7 +66,7 @@ const ProjectBox = ({ project }) => {
 						return (
 							<span
 								key={"tech" + idx}
-								className="text-gray-900 border dark:border-white/40 border-black/40 px-2.5 py-0.5 m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600"
+								className="text-gray-900 px-3 py-1 m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600"
 							>
 								{tech}
 							</span>
