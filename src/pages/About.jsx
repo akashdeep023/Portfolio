@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import JackImg from "../assets/img.png";
 import Heading from "../components/Heading";
 import Resume from "../assets/AKASHDEEP-RESUME.pdf";
+import Graph from "/graph.svg";
 import { BiDownload } from "react-icons/bi";
 import { GoCopy } from "react-icons/go";
 import { contactDetails, socialLinks } from "../utils/constant";
@@ -179,6 +180,12 @@ const About = () => {
 							<BiDownload className="group-active:translate-y-full transition-all " />
 							<span>Download Resume</span>
 						</a>
+					</div>
+					<h2 className="font-bold text-2xl uppercase mt-6">
+						Github Contribution
+					</h2>
+					<div className="flex flex-col items-center gap-4">
+						<img src={Graph} alt="Graph" loading="lazy" />
 					</div>
 				</div>
 			</div>
