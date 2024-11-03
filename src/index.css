@@ -111,3 +111,13 @@ span {
 #projectbox > span:hover ~ div #imageP {
 	opacity: 0 !important;
 }
+
+#scoreFam div {
+	perspective: 1000px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scoreFam > div:hover {
+	transform: rotateX(15deg) rotateY(15deg) translateZ(20px) scale(0.95) !important;
+	box-shadow: 0 15px 30px rgba(0, 255, 13, 0.118);
+}
