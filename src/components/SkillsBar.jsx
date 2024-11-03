@@ -63,7 +63,7 @@ const SkillsBar = () => {
 									className="skill w-full h-1.5 sm:h-2 bg-gradient-to-l to-customeGreen-500 from-customeGreen-600 rounded-xl relative "
 									style={{ width: skill.percentage }}
 								>
-									<div className="h-3 w-3 sm:h-4 sm:w-4 bg-black dark:bg-white rounded-full absolute -top-1/2 -right-2 before:content-[''] before:bg-black/80 dark:before:bg-white/80  before:absolute before:w-full before:h-full before:rounded-full before:animate-ping"></div>
+									<div className="h-3 w-3 sm:h-4 sm:w-4 bg-gray-600 dark:bg-white rounded-full absolute -top-1/2 -right-2 before:content-[''] before:bg-gray-600/80 dark:before:bg-white/80  before:absolute before:w-full before:h-full before:rounded-full before:animate-ping"></div>
 								</div>
 							</div>
 						</div>
