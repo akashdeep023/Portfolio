@@ -105,6 +105,9 @@ span {
 }
 
 #projectbox > span:hover ~ div {
-	transform: rotateX(45deg) translateY(100px) translateZ(100px) scale(0.92);
-	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+	transform: rotateX(45deg) translateY(100px) translateZ(100px) scale(0.92) !important;
+	box-shadow: 0 15px 30px rgba(0, 255, 13, 0.167);
+}
+#projectbox > span:hover ~ div #imageP {
+	opacity: 0 !important;
 }

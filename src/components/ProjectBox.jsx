@@ -36,26 +36,27 @@ const ProjectBox = ({ project }) => {
 					)}
 				</span>
 			</span>
-			<span className="w-full z-10 projectB absolute top-10 px-3 py-5  group-hover:opacity-100 translate-y-1/2 group-hover:translate-y-0 opacity-0 transition-all duration-300">
+			<span className="w-full z-10 absolute top-10 px-3 py-5 group-hover:opacity-100 translate-y-1/2 group-hover:translate-y-0 opacity-0 transition-all duration-300">
 				<img
-					id="imageP"
 					src={"/projects/" + project.image}
 					alt={project.name}
-					className="h-full w-full"
+					className="w-full"
 				/>
 			</span>
-			<div className="projectB  flex flex-col gap-2 overflow-hidden bg-gradient-to-t to-customeLight-500 h-full dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 px-3 py-5  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50">
+			<div className="flex flex-col gap-2 overflow-hidden bg-gradient-to-t to-customeLight-500 h-full dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 px-3 py-5  rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50">
 				<h2 className="text-center text-xl sm:text-2xl font-bold">
 					{project.name}
 				</h2>
 				<div className="h-20 w-20 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div className="h-20 w-20 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
-				<div className="w-full z-10 projectB transition-all duration-300 group-hover:opacity-0">
+				<div
+					className="w-full z-10 transition-all duration-300"
+					id="imageP"
+				>
 					<img
-						id="imageP"
 						src={"/projects/" + project.image}
 						alt={project.name}
-						className="h-full w-full"
+						className="w-full"
 					/>
 				</div>
 				<p className="opacity-70 text-lg">{project.project}</p>
