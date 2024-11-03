@@ -1,6 +1,7 @@
 import React from "react";
 import LoaderName from "./LoaderName";
 import { Link } from "react-router-dom";
+import { contactDetails, socialLinks } from "../utils/constant";
 
 const Footer = () => {
 	return (
@@ -19,18 +20,18 @@ const Footer = () => {
 								Contact
 							</li>
 							<li>Akash Deep</li>
-							<li>Patna, Bihar</li>
+							<li>{contactDetails.address}</li>
 							<li>Pincode - 801303</li>
 
 							<li>
 								<a
 									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
-									href="mailto:contact.akashdeep023@gmail.com"
+									href={`mailto:${contactDetails.email}`}
 									target="_blank"
 									rel="noreferrer"
 								>
 									{" "}
-									contact.akashdeep023@gmail.com
+									{contactDetails.email}
 								</a>
 							</li>
 						</ul>
@@ -93,40 +94,24 @@ const Footer = () => {
 							<li className="font-bold mb-2 text-sm sm:text-base">
 								Links
 							</li>
+							{socialLinks.map((social) => {
+								return (
+									<li>
+										<a
+											className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
+											href={social.link}
+											target="_blank"
+											rel="noreferrer"
+										>
+											{social.name}
+										</a>
+									</li>
+								);
+							})}
 							<li>
 								<a
 									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
-									href="https://www.linkedin.com/in/akashdeep023/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									LinkedIn
-								</a>
-							</li>
-							<li>
-								<a
-									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
-									href="https://github.com/akashdeep023/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									Github
-								</a>
-							</li>
-							<li>
-								<a
-									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
-									href="https://instagram.com/akashdeep023_/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									Instagram
-								</a>
-							</li>
-							<li>
-								<a
-									className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
-									href="mailto:contact.akashdeep023@gmail.com"
+									href={`mailto:${contactDetails.email}`}
 									target="_blank"
 									rel="noreferrer"
 								>

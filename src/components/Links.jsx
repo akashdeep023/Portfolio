@@ -7,13 +7,14 @@ import {
 	FaSun,
 } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
+import { contactDetails, socialLinks } from "../utils/constant";
 
 const Links = ({ darkMode, setDarkMode }) => {
 	return (
 		<div className="dark:text-white flex items-center justify-center w-full ">
 			<div className="flex items-center justify-center gap-6 sm:gap-10 backdrop-blur-md px-6 sm:px-10 py-3 sm:py-4 rounded-t-3xl border-t-2 dark:border-white border-black">
 				<a
-					href="https://www.linkedin.com/in/akashdeep023/"
+					href={socialLinks[0].link}
 					target="_blank"
 					rel="noreferrer"
 					className="border-b-2 border-black/50 dark:border-white/50 p-1"
@@ -21,7 +22,7 @@ const Links = ({ darkMode, setDarkMode }) => {
 					<FaLinkedinIn fontSize={"25px"} />
 				</a>
 				<a
-					href="https://github.com/akashdeep023/"
+					href={socialLinks[1].link}
 					target="_blank"
 					rel="noreferrer"
 					className="border-b-2 border-black/50 dark:border-white/50 p-1"
@@ -29,7 +30,7 @@ const Links = ({ darkMode, setDarkMode }) => {
 					<FaGithub fontSize={"25px"} />
 				</a>
 				<a
-					href="https://instagram.com/akashdeep023_/"
+					href={socialLinks[2].link}
 					target="_blank"
 					rel="noreferrer"
 					className="border-b-2 border-black/50 dark:border-white/50 p-1"
@@ -37,7 +38,7 @@ const Links = ({ darkMode, setDarkMode }) => {
 					<FaInstagram fontSize={"25px"} />
 				</a>
 				<a
-					href="mailto:contact.akashdeep023@gmail.com"
+					href={`mailto:${contactDetails.email}`}
 					target="_blank"
 					rel="noreferrer"
 					className="border-b-2 border-black/50 dark:border-white/50 p-1"
