@@ -109,7 +109,10 @@ const ContactBox = () => {
 									to={`tel:${contactDetails.phone}`}
 									className="relative before:content-[''] before:bg-black dark:before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 								>
-									{contactDetails.phone}
+									{contactDetails.phone.replace(
+										"75245",
+										"XXXXX"
+									)}
 								</Link>
 							</span>
 						)}
