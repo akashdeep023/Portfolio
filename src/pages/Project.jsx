@@ -20,7 +20,7 @@ const Project = () => {
 				scroller: "body",
 				start: "top 125%",
 				end: "bottom 125%",
-				scrub: 3,
+				scrub: 1,
 			},
 		});
 	});
