@@ -3,6 +3,11 @@ export const contactDetails = {
 	email: "contact.akashdeep023@gmail.com",
 	phone: "+91 6207524516",
 };
+export const socialLinks = [
+	{ name: "LinkedIn", link: "https://www.linkedin.com/in/akashdeep023/" },
+	{ name: "GitHub", link: "https://github.com/akashdeep023/" },
+	{ name: "Instagram", link: "https://instagram.com/akashdeep023_/" },
+];
 export const projectDetails = [
 	{
 		name: "Chat App",
