@@ -91,3 +91,20 @@ span {
 	-webkit-appearance: none; /* Chrome, Safari, Edge */
 	margin: 0;
 }
+
+/* Project Hover Animation */
+#projectbox {
+	perspective: 1000px;
+	perspective-origin: bottom;
+}
+
+#projectbox > div {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transform-style: preserve-3d;
+	transform-origin: 50% 80%;
+}
+
+#projectbox > span:hover ~ div {
+	transform: rotateX(45deg) translateY(100px) translateZ(100px) scale(0.92);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
