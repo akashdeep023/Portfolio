@@ -106,12 +106,13 @@ span {
 
 #projectbox > span:hover ~ div {
 	transform: rotateX(45deg) translateY(100px) translateZ(100px) scale(0.92) !important;
-	box-shadow: 0 15px 30px rgba(0, 255, 13, 0.167);
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.641);
 }
 #projectbox > span:hover ~ div #imageP {
 	opacity: 0 !important;
 }
 
+/* ScoreFac Animation */
 #scoreFam div {
 	perspective: 1000px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -119,5 +120,5 @@ span {
 
 #scoreFam > div:hover {
 	transform: rotateX(15deg) rotateY(15deg) translateZ(20px) scale(0.95) !important;
-	box-shadow: 0 15px 30px rgba(0, 255, 13, 0.118);
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.641);
 }
