@@ -62,7 +62,7 @@ const About = () => {
 						/>
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-						<div className="relative overflow-hidden w-full min-h-32 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-4 flex-col">
+						<div className="relative overflow-hidden w-full min-h-36 sm:min-h-44 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-4 flex-col">
 							<h2 className="font-bold text-lg sm:text-xl uppercase flex items-center">
 								Do you want to start a project together?
 							</h2>
@@ -85,7 +85,7 @@ const About = () => {
 						</div>
 						<a
 							href={"#resume"}
-							className="row-span-2 relative overflow-hidden w-full min-h-32 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-3 flex-col"
+							className="row-span-2 relative overflow-hidden w-full min-h-36 sm:min-h-44 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-3 flex-col"
 						>
 							<div
 								id="animation-box1"
@@ -102,7 +102,7 @@ const About = () => {
 								Hire me
 							</h2>
 						</a>
-						<div className="relative overflow-hidden w-full min-h-32 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-4 flex-col">
+						<div className="relative overflow-hidden w-full min-h-36 sm:min-h-44 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-4 flex-col">
 							<h2 className="font-bold text-lg sm:text-xl uppercase flex items-center">
 								Let's connect with me
 							</h2>
@@ -132,7 +132,7 @@ const About = () => {
 						What i'm doing
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-						<div className="relative overflow-hidden w-full min-h-32 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-2 flex-col">
+						<div className="relative overflow-hidden w-full min-h-36 sm:min-h-44 p-4 sm:p-6 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50 bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600  flex items-center text-center justify-center gap-2 flex-col">
 							<div className="font-bold text-lg sm:text-xl uppercase">
 								Full Stack Web development
 							</div>

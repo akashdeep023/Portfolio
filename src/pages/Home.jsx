@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import ScoreFam from "../components/ScoreFam";
 import SkillsBar from "../components/SkillsBar";
 import Contact from "./Contact";
+import QuickBox from "../components/QuickBox";
 
 const Home = () => {
 	return (
@@ -18,6 +19,7 @@ const Home = () => {
 			</a>
 			<Hero />
 			<ScoreFam />
+			<QuickBox />
 			<SkillsBar />
 			<Contact />
 		</div>
