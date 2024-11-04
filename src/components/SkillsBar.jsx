@@ -16,8 +16,8 @@ const SkillsBar = () => {
 			scrollTrigger: {
 				trigger: ".skills-bar",
 				scroller: "body",
-				start: "top 60%",
-				end: "top 20%",
+				start: "top 80%",
+				end: "bottom 100%",
 				scrub: 4,
 			},
 		});
@@ -28,13 +28,13 @@ const SkillsBar = () => {
 			snap: {
 				innerText: 0.1,
 			},
-			stagger: 0.8,
+			stagger: 1,
 			scrollTrigger: {
 				trigger: ".skills-bar .percentage",
 				scroller: "body",
-				start: "top 60%",
-				end: "top 20%",
-				scrub: 4,
+				start: "top 80%",
+				end: "bottom 100%",
+				scrub: 10,
 			},
 		});
 	});
@@ -52,7 +52,10 @@ const SkillsBar = () => {
 							className="flex flex-col gap-2 z-10 relative"
 						>
 							<div className="flex">
-								<span>{skill.name}</span>
+								<span>
+									{skill.name}
+									{skill?.icon}
+								</span>
 								<span className="percentage ms-2">
 									{skill.percentage.replace("%", "")}
 								</span>
