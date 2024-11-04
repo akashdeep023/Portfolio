@@ -1,3 +1,5 @@
+import { FaJava } from "react-icons/fa";
+
 export const contactDetails = {
 	address: "Patna, Bihar",
 	email: "contact.akashdeep023@gmail.com",
@@ -25,7 +27,7 @@ export const projectDetails = [
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"TailwindCSS",
+			"Tailwind CSS",
 			"JavaScript",
 		],
 		project: "Major Project",
@@ -44,7 +46,7 @@ export const projectDetails = [
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"Bootstrap",
+			"Bootstrap CSS",
 			"JavaScript",
 			"Passport.js",
 			"MapBox",
@@ -61,7 +63,7 @@ export const projectDetails = [
 		image: "food-plaza.png",
 		description:
 			"A user-friendly food delivery app offering seamless browsing, ordering, and tracking of meals with a personalized experience for customers.",
-		technology: ["React.js", "Redux", "CSS", "JavaScript"],
+		technology: ["React.js", "Redux", "Vanilla CSS", "JavaScript"],
 		project: "Major Project",
 	},
 	{
@@ -76,7 +78,7 @@ export const projectDetails = [
 		technology: [
 			"React.js",
 			"Redux",
-			"TailwindCSS",
+			"Tailwind CSS",
 			"JavaScript",
 			"Firebase",
 		],
@@ -95,7 +97,7 @@ export const projectDetails = [
 			"Node.js",
 			"Express.js",
 			"HTML",
-			"CSS",
+			"Vanilla CSS",
 			"JavaScript",
 		],
 		project: "Major Project",
@@ -111,7 +113,7 @@ export const projectDetails = [
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"TailwindCSS",
+			"Tailwind CSS",
 			"JavaScript",
 		],
 		project: "Client Project",
@@ -122,7 +124,7 @@ export const projectDetails = [
 		image: "drioh.png",
 		description:
 			"An interactive project focused on UI/UX using React and Tailwind CSS for responsive design.",
-		technology: ["React.js", "TailwindCSS", "JavaScript"],
+		technology: ["React.js", "Tailwind CSS", "JavaScript"],
 		project: "Client Project",
 	},
 	{
@@ -131,7 +133,7 @@ export const projectDetails = [
 		image: "quable.png",
 		description:
 			"A masala delivery service website featuring an intuitive interface and responsive design, built using React and Tailwind CSS.",
-		technology: ["React.js", "TailwindCSS", "JavaScript"],
+		technology: ["React.js", "Tailwind CSS", "JavaScript"],
 		project: "Client Project",
 	},
 	{
@@ -146,7 +148,7 @@ export const projectDetails = [
 			"Node.js",
 			"MongoDB",
 			"Express.js",
-			"TailwindCSS",
+			"Tailwind CSS",
 			"JavaScript",
 		],
 		project: "Mini Major Project",
@@ -158,7 +160,13 @@ export const projectDetails = [
 		image: "weather.png",
 		description:
 			"A simple weather application providing current weather details based on location, built with React and Material UI.",
-		technology: ["React.js", "MaterialUI", "HTML", "CSS", "JavaScript"],
+		technology: [
+			"React.js",
+			"MaterialUI",
+			"HTML",
+			"Vanilla CSS",
+			"JavaScript",
+		],
 		project: "Mini Major Project",
 	},
 	{
@@ -168,7 +176,7 @@ export const projectDetails = [
 		image: "simon-say.png",
 		description:
 			"A web-based implementation of the classic memory game 'Simon Says,' challenging players to recall and repeat color sequences.",
-		technology: ["HTML", "CSS", "JavaScript"],
+		technology: ["HTML", "Vanilla CSS", "JavaScript"],
 		project: "Mini Major Project",
 	},
 	{
@@ -178,7 +186,7 @@ export const projectDetails = [
 		image: "amazon.png",
 		description:
 			"A frontend clone of the Amazon website built to practice and improve web development skills.",
-		technology: ["HTML", "CSS", "JavaScript"],
+		technology: ["HTML", "Vanilla CSS", "JavaScript"],
 		project: "Mini Major Project",
 	},
 	{
@@ -188,7 +196,7 @@ export const projectDetails = [
 		image: "spotify.png",
 		description:
 			"A frontend clone of the Spotify website, created to practice HTML and CSS skills.",
-		technology: ["HTML", "CSS"],
+		technology: ["HTML", "Vanilla CSS"],
 		project: "Mini Major Project",
 	},
 ];
@@ -197,34 +205,52 @@ export const skills = [
 	{
 		name: "Java",
 		percentage: "80%",
+		top: true,
 	},
 	{
 		name: "JavaScript",
 		percentage: "90%",
+		top: true,
 	},
 	{
 		name: "React.js",
 		percentage: "90%",
+		top: true,
 	},
 	{
 		name: "Node.js",
 		percentage: "85%",
+		top: true,
 	},
 	{
 		name: "Express.js",
 		percentage: "80%",
+		top: true,
 	},
 	{
 		name: "MongoDB",
 		percentage: "80%",
+		top: true,
 	},
 	{
 		name: "MySQL",
 		percentage: "75%",
 	},
 	{
+		name: "Firebase",
+		percentage: "85%",
+	},
+	{
+		name: "Redux",
+		percentage: "80%",
+	},
+	{
 		name: "HTML",
 		percentage: "98%",
+	},
+	{
+		name: "EJS",
+		percentage: "95%",
 	},
 	{
 		name: "Vanilla CSS",
@@ -237,6 +263,7 @@ export const skills = [
 	{
 		name: "Tailwind CSS",
 		percentage: "92%",
+		top: true,
 	},
 	{
 		name: "Git/GitHub",
