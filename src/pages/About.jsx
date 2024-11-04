@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import JackImg from "../assets/img.png";
 import Heading from "../components/Heading";
 import Resume from "../assets/AKASHDEEP-RESUME.pdf";
 import Graph from "/graph.svg";
 import { BiDownload } from "react-icons/bi";
 import { GoCopy } from "react-icons/go";
-import { contactDetails, socialLinks } from "../utils/constant";
+import { contactDetails, skills, socialLinks } from "../utils/constant";
 import { Link } from "react-router-dom";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { DiJavascript1 } from "react-icons/di";
+import { FaJava } from "react-icons/fa6";
+import {
+	SiExpress,
+	SiMongodb,
+	SiNodedotjs,
+	SiReact,
+	SiTailwindcss,
+} from "react-icons/si";
 
 const About = () => {
 	const [emailCopy, setEmailCopy] = useState(false);
@@ -15,9 +24,9 @@ const About = () => {
 		<div className="w-full h-fit flex flex-wrap justify-evenly mb-4 sm:mb-8">
 			<Heading text={"About"} />
 			<div className="py-4 sm:py-5 md:py-6 px-6 sm:px-9 md:px-12 w-full flex justify-center">
-				<div className="w-full sm:w-5/6 px-4 py-5 relative group flex flex-col gap-2 overflow-hidden bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 min-h-72 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50">
-					<div className="h-20 w-20 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
-					<div className="h-20 w-20 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
+				<div className="w-full sm:w-5/6 px-4 py-5 relative flex flex-col gap-2 overflow-hidden bg-gradient-to-t to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600 min-h-72 rounded-3xl border dark:border-white/40 border-black/40 shadow-md shadow-black/50">
+					<div className="h-20 w-20 blur-3xl z-0 absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
+					<div className="h-20 w-20 blur-3xl z-0 absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 					<h2 className="font-bold text-2xl sm:text-3xl uppercase">
 						Akash Deep
 					</h2>
@@ -49,7 +58,7 @@ const About = () => {
 						<img
 							src={JackImg}
 							alt="Image"
-							className="h-36 sm:h-40 w-36 sm:w-40 self-center sm:self-start rounded-2xl border mt-4 dark:border-white/50 border-black/50"
+							className="h-36 sm:h-40 w-36 sm:w-40 self-center sm:self-start rounded-2xl shadow-md shadow-black border mt-4 dark:border-white/50 border-black/50"
 						/>
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
@@ -136,28 +145,37 @@ const About = () => {
 					<h2 className="font-bold text-2xl mt-4 uppercase">
 						Top skills
 					</h2>
-					<div>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							Javascript
-						</span>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							JAVA
-						</span>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							React.js
-						</span>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							Node.js
-						</span>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							Express.js
-						</span>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							MongoDB
-						</span>
-						<span className="text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
-							TailwindCSS
-						</span>
+					<div className="flex">
+						{skills.map((skill, idx) => {
+							return (
+								<Fragment key={skill.name + "skill" + idx}>
+									{skill?.top && (
+										<span className="flex items-center text-sm gap-1 w-fit text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600">
+											{skill.name == "Java" && <FaJava />}
+											{skill.name == "JavaScript" && (
+												<DiJavascript1 />
+											)}
+											{skill.name == "React.js" && (
+												<SiReact />
+											)}
+											{skill.name == "Node.js" && (
+												<SiNodedotjs />
+											)}
+											{skill.name == "Express.js" && (
+												<SiExpress />
+											)}
+											{skill.name == "MongoDB" && (
+												<SiMongodb />
+											)}
+											{skill.name == "Tailwind CSS" && (
+												<SiTailwindcss />
+											)}
+											<span>{skill.name}</span>
+										</span>
+									)}
+								</Fragment>
+							);
+						})}
 					</div>
 					<div id="resume" className="mb-4"></div>
 					<h2 className="font-bold text-2xl uppercase">Resume</h2>
