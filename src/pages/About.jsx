@@ -145,7 +145,7 @@ const About = () => {
 					<h2 className="font-bold text-2xl mt-4 uppercase">
 						Top skills
 					</h2>
-					<div className="flex">
+					<div className="flex flex-wrap">
 						{skills.map((skill, idx) => {
 							return (
 								<Fragment key={skill.name + "skill" + idx}>
