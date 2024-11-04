@@ -1,6 +1,24 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { DiJavascript1 } from "react-icons/di";
+import { FaJava } from "react-icons/fa6";
+import {
+	SiBootstrap,
+	SiCloudinary,
+	SiCss3,
+	SiEjs,
+	SiExpress,
+	SiFirebase,
+	SiHtml5,
+	SiMapbox,
+	SiMongodb,
+	SiNodedotjs,
+	SiPassport,
+	SiReact,
+	SiRedux,
+	SiTailwindcss,
+} from "react-icons/si";
 
 const ProjectBox = ({ project }) => {
 	return (
@@ -61,14 +79,30 @@ const ProjectBox = ({ project }) => {
 				</div>
 				<p className="opacity-70 text-lg">{project.project}</p>
 				<p className="line-clamp-2">{project.description}</p>
-				<p className="line-clamp-4 z-10 min-h-20">
-					{project.technology.map((tech, idx) => {
+				<p className="line-clamp-4 z-10 flex flex-wrap">
+					{project.technology.map((skill, idx) => {
 						return (
 							<span
-								key={"tech" + idx}
-								className="text-gray-900 px-3 py-1 m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600"
+								key={skill + "tech" + idx}
+								className="flex items-center text-sm gap-1 w-fit text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600"
 							>
-								{tech}
+								{skill == "Java" && <FaJava />}
+								{skill == "JavaScript" && <DiJavascript1 />}
+								{skill == "React.js" && <SiReact />}
+								{skill == "Node.js" && <SiNodedotjs />}
+								{skill == "Express.js" && <SiExpress />}
+								{skill == "MongoDB" && <SiMongodb />}
+								{skill == "Tailwind CSS" && <SiTailwindcss />}
+								{skill == "Bootstrap CSS" && <SiBootstrap />}
+								{skill == "Passport.js" && <SiPassport />}
+								{skill == "Cloudinary" && <SiCloudinary />}
+								{skill == "Firebase" && <SiFirebase />}
+								{skill == "MapBox" && <SiTailwindcss />}
+								{skill == "Redux" && <SiRedux />}
+								{skill == "HTML" && <SiHtml5 />}
+								{skill == "Vanilla CSS" && <SiCss3 />}
+								{skill == "EJS" && <SiEjs />}
+								<span>{skill}</span>
 							</span>
 						);
 					})}
