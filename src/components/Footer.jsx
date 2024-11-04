@@ -96,7 +96,7 @@ const Footer = () => {
 							</li>
 							{socialLinks.map((social) => {
 								return (
-									<li>
+									<li key={social.name}>
 										<a
 											className="relative before:content-[''] before:bg-white before:absolute before:bottom-0 before:left-0 before:w-0 hover:before:w-full before:h-px before:rounded-lg before:transition-all before:duration-300"
 											href={social.link}
