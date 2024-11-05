@@ -1,7 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
 import Header, { SubHeader } from "./components/Header";
-import LocomotiveScroll from "locomotive-scroll";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 const Home = React.lazy(() => {
@@ -25,15 +23,6 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
 	const [headerShow, setHeaderShow] = useState(false);
 	const [scrollShow, setScrollShow] = useState(true);
-
-	// Use LOCOMotiveScroll -----------------------------
-	// const scrollBox = useRef("");
-	// useEffect(() => {
-	// 	const scroll = new LocomotiveScroll({
-	// 		el: document.querySelector(".scrollPage"),
-	// 		smooth: true,
-	// 	});
-	// }, [scrollBox.current, scroll]);
 
 	// Scroll btn hide --------------------------------
 	useEffect(() => {
@@ -60,19 +49,9 @@ function App() {
 	}, []);
 	return (
 		<BrowserRouter>
-			<div
-				className={`${darkMode ? "dark" : ""}`}
-				// data-scroll-container
-				// className="sticky scrollPage"
-				// ref={scrollBox}
-			>
+			<div className={`${darkMode ? "dark" : ""}`}>
 				<div className="relative text-black dark:text-white bg-gradient-to-l to-customeLight-500 dark:to-customeDark-500 from-customeLight-600 dark:from-customeDark-600">
-					<div
-						// data-scroll
-						// data-scroll-sticky
-						// data-scroll-target=".scrollPage"
-						className="relative z-50"
-					>
+					<div className="relative z-50">
 						<SubHeader setHeaderShow={setHeaderShow} />
 						{headerShow && <Header setHeaderShow={setHeaderShow} />}
 					</div>
