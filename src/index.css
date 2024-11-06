@@ -99,7 +99,7 @@ span {
 }
 
 #projectbox > div {
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
 	transform-style: preserve-3d;
 	transform-origin: 50% 80%;
 }

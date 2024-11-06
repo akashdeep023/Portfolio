@@ -19,10 +19,32 @@ import {
 	SiRedux,
 	SiTailwindcss,
 } from "react-icons/si";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
-const ProjectBox = ({ project }) => {
+const ProjectBox = ({ project, idx }) => {
+	useGSAP(() => {
+		gsap.from(".projectbox" + idx, {
+			duration: 1,
+			opacity: 0,
+			y: 150,
+			animation: "easeOutQuad",
+			scrollTrigger: {
+				scroller: "body",
+				trigger: ".projectbox" + idx,
+				start: "top 110%",
+				end: "top 70%",
+				scrub: 2,
+			},
+		});
+	});
 	return (
-		<div id="projectbox" className="hover:z-30 group relative">
+		<div
+			id="projectbox"
+			className={`hover:z-30 group relative projectbox${idx}`}
+		>
 			<span className="z-20 h-full w-full absolute top-0 left-0 flex transition-all duration-700 items-center group-hover:opacity-100 opacity-0">
 				<span className="p-2 flex justify-center gap-4 w-full group-hover:translate-y-full transition-all duration-300">
 					{project?.live && (
@@ -54,7 +76,7 @@ const ProjectBox = ({ project }) => {
 					)}
 				</span>
 			</span>
-			<span className="w-full z-10 absolute top-10 px-3 py-5 group-hover:opacity-100 translate-y-1/2 group-hover:translate-y-0 opacity-0 transition-all duration-300">
+			<span className="w-full z-10 absolute top-10 px-3 py-5 group-hover:opacity-100 translate-y-1/2 group-hover:translate-y-0 opacity-0 transition-all duration-500 ease-in-out">
 				<img
 					src={"/projects/" + project.image}
 					alt={project.name}
@@ -68,7 +90,7 @@ const ProjectBox = ({ project }) => {
 				<div className="h-20 w-20 blur-3xl z-0  absolute top-0 right-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div className="h-20 w-20 blur-3xl z-0  absolute bottom-0 left-0 bg-gradient-to-t to-customeGreen-500 from-customeGreen-600"></div>
 				<div
-					className="w-full z-10 transition-all duration-300"
+					className="w-full z-10 transition-all duration-100"
 					id="imageP"
 				>
 					<img
@@ -79,12 +101,12 @@ const ProjectBox = ({ project }) => {
 				</div>
 				<p className="opacity-70 text-lg">{project.project}</p>
 				<p className="line-clamp-2">{project.description}</p>
-				<p className="line-clamp-4 z-10 flex flex-wrap">
+				<p className="line-clamp-4 z-10 flex flex-wrap min-h-20 justify-start content-start gap-0">
 					{project.technology.map((skill, idx) => {
 						return (
 							<span
 								key={skill + "tech" + idx}
-								className="flex items-center text-sm gap-1 w-fit text-gray-900 px-3 py-1 shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600"
+								className="flex items-center text-sm gap-1 w-fit text-gray-900 px-3 py-1 h-fit shadow-lg m-0.5 rounded-3xl bg-gradient-to-l to-customeGreen-500 from-customeGreen-600"
 							>
 								{skill == "Java" && <FaJava />}
 								{skill == "JavaScript" && <DiJavascript1 />}
@@ -97,7 +119,7 @@ const ProjectBox = ({ project }) => {
 								{skill == "Passport.js" && <SiPassport />}
 								{skill == "Cloudinary" && <SiCloudinary />}
 								{skill == "Firebase" && <SiFirebase />}
-								{skill == "MapBox" && <SiTailwindcss />}
+								{skill == "MapBox" && <SiMapbox />}
 								{skill == "Redux" && <SiRedux />}
 								{skill == "HTML" && <SiHtml5 />}
 								{skill == "Vanilla CSS" && <SiCss3 />}
