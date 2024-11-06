@@ -98,7 +98,7 @@ const ProjectBox = ({ project, idx }) => {
 					<img
 						src={"/projects/" + project.image}
 						alt={project.name}
-						className="w-full"
+						className="w-full aspect-video"
 					/>
 				</div>
 				<p className="opacity-70 text-lg">{project.project}</p>
