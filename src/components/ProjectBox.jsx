@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaGithub, FaLinkedinIn, FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { DiJavascript1 } from "react-icons/di";
@@ -25,6 +25,7 @@ import { gsap } from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectBox = ({ project, idx }) => {
+	const projectbox = useRef();
 	useGSAP(() => {
 		gsap.from(".projectbox" + idx, {
 			duration: 1,
@@ -39,9 +40,10 @@ const ProjectBox = ({ project, idx }) => {
 				scrub: 2,
 			},
 		});
-	});
+	}, [projectbox]);
 	return (
 		<div
+			ref={projectbox}
 			id="projectbox"
 			className={`hover:z-30 group relative projectbox${idx}`}
 		>
