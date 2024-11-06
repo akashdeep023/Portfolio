@@ -27,10 +27,12 @@ const ContactBox = () => {
 			)
 		);
 		if (
-			name &&
-			email?.current?.value &&
-			mobile?.current?.value &&
-			message?.current?.value
+			checkValidContactFrom(
+				name,
+				email?.current?.value,
+				mobile?.current?.value,
+				message?.current?.value
+			) == null
 		) {
 			// Send mail
 			const formData = new FormData(e.target);
