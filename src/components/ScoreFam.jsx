@@ -9,13 +9,13 @@ const ScoreFam = () => {
 		gsap.from(".score-fam > div ", {
 			duration: 5,
 			opacity: 0,
-			y: 100,
-			stagger: 0.8,
+			y: 150,
+			stagger: 0.5,
 			scrollTrigger: {
 				trigger: ".score-fam",
 				scroller: "body",
 				start: "top 120%",
-				end: "top 60%",
+				end: "top 40%",
 				scrub: 3,
 			},
 		});
