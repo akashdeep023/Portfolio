@@ -36,10 +36,7 @@ const ContactBox = () => {
 		) {
 			// Send mail
 			const formData = new FormData(e.target);
-			formData.append(
-				"access_key",
-				"e2aba0ae-ac33-44aa-b9e7-eca2f3a766f5"
-			);
+			formData.append("access_key", `${import.meta.env.VITE_ACCESS_KEY}`);
 			setLoading(true);
 			e.target[4].disabled = true;
 
