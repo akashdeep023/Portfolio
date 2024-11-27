@@ -18,7 +18,6 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 </a>
 
-
 ---
 
 ## 📜 Project Overview
@@ -27,48 +26,58 @@ The portfolio is built using **React** and **Vite** to deliver fast performance 
 
 ## 🔧 Key Features
 
-- **Dynamic UI**: Leveraging GSAP for smooth animations and interactive design.
-- **Navigation**: Simple and seamless page transitions using React Router.
-- **Responsive Design**: Ensuring the website looks great on any device, thanks to Tailwind CSS.
-- **Optimized Build**: Vite provides a fast development environment and optimized production build for better load times.
+-   **Dynamic UI**: Leveraging GSAP for smooth animations and interactive design.
+-   **Navigation**: Simple and seamless page transitions using React Router.
+-   **Responsive Design**: Ensuring the website looks great on any device, thanks to Tailwind CSS.
+-   **Optimized Build**: Vite provides a fast development environment and optimized production build for better load times.
 
 ## 🛠️ Technologies & Packages Used
 
-- **Vite**: A fast and powerful development tool for front-end web projects.
-- **React**: A JavaScript library for building user interfaces.
-- **Tailwind CSS**: Utility-first CSS framework to create a responsive, modern design.
-- **GSAP**: Animation library for smooth, high-performance animations.
-- **React Router**: Simplifies navigation within the app.
-- **ESLint**: Helps maintain code quality with error-free, clean code.
+-   **Vite**: A fast and powerful development tool for front-end web projects.
+-   **React**: A JavaScript library for building user interfaces.
+-   **Tailwind CSS**: Utility-first CSS framework to create a responsive, modern design.
+-   **GSAP**: Animation library for smooth, high-performance animations.
+-   **React Router**: Simplifies navigation within the app.
+-   **ESLint**: Helps maintain code quality with error-free, clean code.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-Make sure you have **Node.js** and **npm**  installed on your machine.
+Make sure you have **Node.js** and **npm** installed on your machine.
 
 ### Installation
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/akashdeep023/Portfolio
-   cd portfolio
-   ```
+    ```bash
+    git clone https://github.com/akashdeep023/Portfolio
+    cd portfolio
+    ```
 
 2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
-3. Start the development server:
+3. Set Up Environment Variables:
 
-   ```bash
-   npm run dev
-   ```
+    Configure the following environment variables by creating a .env file in the root of your project:
 
-4. Open your browser and go to `http://localhost:5173` to view the project.
+    ```bash
+    VITE_ACCESS_KEY=cjlkaom43ic-0sk2-8skd-8s9k-di29jinscis89s
+    ```
+
+    Replace the values with your specific configurations.
+
+4. Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open your browser and go to `http://localhost:5173` to view the project.
 
 ### Build for Production
 
